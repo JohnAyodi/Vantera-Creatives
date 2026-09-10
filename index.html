@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0E1521" />
 
   <meta
     name="description"
-    content="Vantera Creatives — a Nairobi creative studio specializing in branding, graphic design, photography, video, motion and visual storytelling."
+    content="Vantera Creatives — Branding, graphic design and multimedia production by John Ayodi."
   />
 
   <meta
@@ -17,14 +16,15 @@
 
   <meta
     property="og:description"
-    content="Distinctive brands, visual communication and multimedia experiences for ambitious businesses."
+    content="Distinctive brands, visual communication and multimedia content for ambitious businesses."
   />
 
   <meta property="og:type" content="website" />
 
+  <meta name="theme-color" content="#0E1521" />
+
   <title>Vantera Creatives — Branding • Design • Multimedia</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -33,43 +33,36 @@
     rel="stylesheet"
   />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- Subtle page texture -->
   <div class="page-noise" aria-hidden="true"></div>
 
   <!-- =========================
-       HEADER
+       NAVIGATION
   ========================== -->
+
   <header class="site-header" id="top">
 
     <nav class="nav container" aria-label="Primary navigation">
 
-      <a
-        class="wordmark"
-        href="#top"
-        aria-label="Vantera Creatives home"
-      >
-        <span>VANTERA</span>
-        <i></i>
+      <a href="#top" class="wordmark" aria-label="Vantera Creatives home">
+        <span>VANTERA</span><i>/</i>
       </a>
 
       <button
         class="menu-toggle"
-        type="button"
-        aria-label="Open menu"
+        aria-label="Open navigation"
         aria-expanded="false"
-        aria-controls="primary-navigation"
+        type="button"
       >
         <span></span>
         <span></span>
       </button>
 
-      <div class="nav-links" id="primary-navigation">
+      <div class="nav-links">
 
         <a href="#work">Work</a>
 
@@ -79,10 +72,7 @@
 
         <a href="#insights">Insights</a>
 
-        <a
-          href="#contact"
-          class="nav-cta"
-        >
+        <a href="#contact" class="nav-cta">
           Start a project <span>↗</span>
         </a>
 
@@ -98,200 +88,111 @@
     <!-- =========================
          HERO
     ========================== -->
-   <section class="services section-dark" id="services">
-  <div class="container">
 
-    <div class="section-head services-head reveal">
-      <div>
-        <p class="section-kicker light">03 / What we do</p>
-        <h2>Creative services<br><span>built around your goals.</span></h2>
+    <section class="hero section-dark">
+
+      <div class="container hero-grid">
+
+        <div class="hero-copy reveal">
+
+          <p class="eyebrow">
+            <span class="dot"></span>
+            Nairobi · Kenya · Creative Studio
+          </p>
+
+          <h1>
+            Ideas deserve<br />
+            <em>distinctive</em> visuals.
+          </h1>
+
+          <p class="hero-lede">
+            Vantera Creatives is a multidisciplinary creative studio
+            building brands, campaigns and multimedia experiences
+            for ambitious businesses.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="#work" class="btn btn-primary">
+              Explore our work <span>↓</span>
+            </a>
+
+            <a href="#contact" class="text-link">
+              Start a project <span>↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="hero-art reveal delay-1"
+          aria-label="Vantera visual composition"
+        >
+
+          <div class="art-frame">
+
+            <div class="art-orange"></div>
+
+            <div class="art-word">V</div>
+
+            <div class="art-caption">
+              <span>VANTERA CREATIVES</span>
+              <span>BRANDING / DESIGN / MULTIMEDIA</span>
+            </div>
+
+            <div class="art-index">01</div>
+
+          </div>
+
+          <div class="floating-note">
+
+            <span class="note-line"></span>
+
+            <span>
+              Built for brands<br />
+              that want to be remembered.
+            </span>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <p class="section-intro light">
-        From identity and design to photography, video and motion,
-        we create visual communication that helps brands stand out
-        and connect with their audience.
-      </p>
-    </div>
 
-    <div class="services-list">
+      <div class="hero-bottom container">
 
-      <!-- 01 BRAND IDENTITY -->
-      <article class="service-item reveal">
-        <div class="service-number">01</div>
+        <div>Selected capabilities</div>
 
-        <div class="service-content">
-          <h3>Brand Identity</h3>
+        <div class="capability-track">
 
-          <p>
-            We build distinctive visual identities that give businesses
-            clarity, character and a recognizable presence.
-          </p>
+          <span>Brand Identity</span>
+          <b>✦</b>
 
-          <div class="service-tags">
-            <span>Logo Design</span>
-            <span>Visual Identity</span>
-            <span>Brand Guidelines</span>
-            <span>Art Direction</span>
-          </div>
+          <span>Graphic Design</span>
+          <b>✦</b>
 
-          <a href="#work" class="service-link" data-service-filter="branding">
-            View brand identity work <span>↗</span>
-          </a>
+          <span>Photography</span>
+          <b>✦</b>
+
+          <span>Videography</span>
+          <b>✦</b>
+
+          <span>Motion</span>
+
         </div>
 
-        <div class="service-arrow">↗</div>
-      </article>
+      </div>
 
-
-      <!-- 02 GRAPHIC DESIGN -->
-      <article class="service-item reveal">
-        <div class="service-number">02</div>
-
-        <div class="service-content">
-          <h3>Graphic Design</h3>
-
-          <p>
-            We create purposeful visual communication for campaigns,
-            social media, publications, marketing and everyday brand needs.
-          </p>
-
-          <div class="service-tags">
-            <span>Campaign Design</span>
-            <span>Social Media</span>
-            <span>Editorial</span>
-            <span>Print</span>
-          </div>
-
-          <a href="#work" class="service-link" data-service-filter="design">
-            View graphic design work <span>↗</span>
-          </a>
-        </div>
-
-        <div class="service-arrow">↗</div>
-      </article>
-
-
-      <!-- 03 PHOTOGRAPHY -->
-      <article class="service-item reveal">
-        <div class="service-number">03</div>
-
-        <div class="service-content">
-          <h3>Photography</h3>
-
-          <p>
-            We create intentional imagery for brands, people, products
-            and campaigns — balancing technical quality with visual storytelling.
-          </p>
-
-          <div class="service-tags">
-            <span>Brand Photography</span>
-            <span>Portraits</span>
-            <span>Products</span>
-            <span>Editorial</span>
-          </div>
-
-          <a href="#work" class="service-link" data-service-filter="photography">
-            View photography work <span>↗</span>
-          </a>
-        </div>
-
-        <div class="service-arrow">↗</div>
-      </article>
-
-
-      <!-- 04 VIDEO PRODUCTION -->
-      <article class="service-item reveal">
-        <div class="service-number">04</div>
-
-        <div class="service-content">
-          <h3>Video Production</h3>
-
-          <p>
-            From concept and scripting to filming and post-production,
-            we produce videos designed to tell stories and move audiences.
-          </p>
-
-          <div class="service-tags">
-            <span>Brand Films</span>
-            <span>Social Video</span>
-            <span>Interviews</span>
-            <span>Documentary</span>
-          </div>
-
-          <a href="#work" class="service-link" data-service-filter="video">
-            View video work <span>↗</span>
-          </a>
-        </div>
-
-        <div class="service-arrow">↗</div>
-      </article>
-
-
-      <!-- 05 MOTION GRAPHICS -->
-      <article class="service-item reveal">
-        <div class="service-number">05</div>
-
-        <div class="service-content">
-          <h3>Motion Graphics</h3>
-
-          <p>
-            We bring visual identities, campaigns and digital content
-            to life through purposeful animation and motion design.
-          </p>
-
-          <div class="service-tags">
-            <span>2D Animation</span>
-            <span>Logo Animation</span>
-            <span>Social Motion</span>
-            <span>Visual Effects</span>
-          </div>
-
-          <a href="#work" class="service-link" data-service-filter="motion">
-            View motion work <span>↗</span>
-          </a>
-        </div>
-
-        <div class="service-arrow">↗</div>
-      </article>
-
-
-      <!-- 06 CONTENT & CAMPAIGNS -->
-      <article class="service-item reveal">
-        <div class="service-number">06</div>
-
-        <div class="service-content">
-          <h3>Content &amp; Campaigns</h3>
-
-          <p>
-            We bring design, photography, video and storytelling together
-            to create cohesive campaigns built around a clear creative idea.
-          </p>
-
-          <div class="service-tags">
-            <span>Creative Campaigns</span>
-            <span>Content Strategy</span>
-            <span>Social Content</span>
-            <span>Art Direction</span>
-          </div>
-
-          <a href="#work" class="service-link" data-service-filter="campaigns">
-            View campaign work <span>↗</span>
-          </a>
-        </div>
-
-        <div class="service-arrow">↗</div>
-      </article>
-
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
     <!-- =========================
-         STUDIO INTRODUCTION
+         THE STUDIO
     ========================== -->
+
     <section class="statement section-light">
 
       <div class="container statement-grid">
@@ -299,7 +200,6 @@
         <p class="section-kicker">
           01 / The studio
         </p>
-
 
         <div>
 
@@ -309,10 +209,11 @@
           </h2>
 
           <p class="statement-copy">
-            Vantera Creatives is a multidisciplinary creative studio working
-            across multimedia production and visual communication. We bring
-            strategy, visual craft and storytelling together to help ambitious
-            businesses communicate with clarity, character and impact.
+            Vantera Creatives is a multidisciplinary creative studio
+            working across multimedia production and visual communication.
+            We bring strategy, visual craft and storytelling together to
+            help ambitious businesses communicate with clarity,
+            character and impact.
           </p>
 
           <p class="statement-capabilities">
@@ -329,10 +230,8 @@
     <!-- =========================
          SELECTED WORK
     ========================== -->
-    <section
-      class="work section-light"
-      id="work"
-    >
+
+    <section class="work section-light" id="work">
 
       <div class="container">
 
@@ -345,33 +244,30 @@
             </p>
 
             <h2>
-              Work that makes<br />
+              Work that makes
+              <br />
               <span>an impression.</span>
             </h2>
 
           </div>
 
-
           <p class="section-intro">
-            A curated selection of brand identities, campaigns, visual stories
-            and multimedia work created with purpose.
+            A selection of visual identities, campaigns,
+            photography and multimedia work created to
+            solve communication problems with creativity.
           </p>
 
         </div>
 
 
-        <!-- Portfolio filters -->
-        <div
-          class="filters"
-          role="tablist"
-          aria-label="Portfolio filters"
-        >
+        <!-- FILTERS -->
+
+        <div class="work-filters reveal" role="tablist" aria-label="Filter projects">
 
           <button
             class="filter active"
-            type="button"
             data-filter="all"
-            role="tab"
+            type="button"
             aria-selected="true"
           >
             All
@@ -379,9 +275,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="branding"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Branding
@@ -389,9 +284,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="design"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Design
@@ -399,9 +293,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="photography"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Photography
@@ -409,9 +302,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="video"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Video
@@ -419,9 +311,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="motion"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Motion
@@ -429,9 +320,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="campaigns"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Campaigns
@@ -440,49 +330,52 @@
         </div>
 
 
-        <!-- Portfolio grid -->
+        <!-- PROJECT GRID -->
+
         <div class="project-grid">
 
 
           <!-- PROJECT 01 -->
+
           <article
             class="project-card project-large reveal"
+            tabindex="0"
+            role="button"
             data-category="branding"
             data-title="Vantera Creatives — Brand Identity"
             data-type="Brand Identity"
-            data-description="A complete visual identity system built around confidence, creative energy and editorial restraint."
-            tabindex="0"
-            role="button"
-            aria-label="View Vantera Creatives brand identity project"
+            data-description="A complete visual identity system developed for Vantera Creatives, including logo direction, typography, colour system and branded applications."
           >
 
-            <div class="project-visual project-vantera">
+            <div class="project-visual project-brand">
 
               <div class="pv-top">
-                VANTERA<br />
-                CREATIVES
+                <span>01</span>
+                <span>BRAND IDENTITY</span>
               </div>
 
-              <div class="pv-center">
-                V
+              <div class="pv-brand-name">
+                VANTERA
               </div>
 
-              <div class="pv-bottom">
-                <span>IDENTITY SYSTEM</span>
-                <span>2026</span>
+              <div class="pv-brand-sub">
+                CREATIVE STUDIO
               </div>
+
+              <div class="pv-orange-block"></div>
 
             </div>
-
 
             <div class="project-meta">
 
               <div>
-                <span>Branding</span>
+                <span class="project-index">01</span>
                 <h3>Vantera Creatives</h3>
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Brand Identity
+              </span>
 
             </div>
 
@@ -490,47 +383,43 @@
 
 
           <!-- PROJECT 02 -->
+
           <article
             class="project-card reveal"
-            data-category="campaigns"
-            data-title="Restaurant Campaign — Concept"
-            data-type="Campaign Design"
-            data-description="A warm, high-impact campaign system for a contemporary Nairobi restaurant, designed for social, print and promotional use."
             tabindex="0"
             role="button"
-            aria-label="View restaurant campaign project"
+            data-category="campaigns"
+            data-title="Commerza Africa — Campaign Design"
+            data-type="Campaign Design"
+            data-description="A visual campaign direction created to communicate a clear commercial message through bold, structured and engaging digital content."
           >
 
-            <div class="project-visual project-food">
+            <div class="project-visual project-campaign">
 
-              <div class="food-circle">
-                SOKO<br />
-                <small>254</small>
+              <div class="campaign-title">
+                MOVE<br />
+                BUSINESS<br />
+                FORWARD.
               </div>
 
-              <div class="food-copy">
-                EAT<br />
-                LOCAL.<br />
-                LIVE<br />
-                FULL.
-              </div>
+              <div class="campaign-shape"></div>
 
-              <div class="pv-bottom">
-                <span>CAMPAIGN CONCEPT</span>
-                <span>01</span>
+              <div class="campaign-label">
+                CAMPAIGN / 2026
               </div>
 
             </div>
 
-
             <div class="project-meta">
 
               <div>
-                <span>Campaigns</span>
-                <h3>Restaurant Campaign</h3>
+                <span class="project-index">02</span>
+                <h3>Campaign Design</h3>
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Campaigns
+              </span>
 
             </div>
 
@@ -538,42 +427,46 @@
 
 
           <!-- PROJECT 03 -->
+
           <article
             class="project-card reveal"
-            data-category="design"
-            data-title="Real Estate — Visual Marketing"
-            data-type="Visual Marketing"
-            data-description="A property marketing direction combining clean listing layouts, premium typography and social-first content."
             tabindex="0"
             role="button"
-            aria-label="View real estate visual marketing project"
+            data-category="design"
+            data-title="Editorial & Social Design"
+            data-type="Graphic Design"
+            data-description="A collection of editorial and digital design work developed around strong typography, composition and clear visual hierarchy."
           >
 
-            <div class="project-visual project-realestate">
+            <div class="project-visual project-editorial">
 
-              <div class="re-label">
-                PROPERTY<br />
-                <strong>01</strong>
+              <div class="editorial-number">
+                03
               </div>
 
-              <div class="re-house"></div>
+              <div class="editorial-title">
+                VISUAL<br />
+                STORIES
+              </div>
 
-              <div class="re-info">
-                <span>MODERN LIVING</span>
-                <b>NAIROBI</b>
+              <div class="editorial-line"></div>
+
+              <div class="editorial-small">
+                DESIGN / EDITORIAL / DIGITAL
               </div>
 
             </div>
 
-
             <div class="project-meta">
 
               <div>
-                <span>Design</span>
-                <h3>Real Estate Visuals</h3>
+                <span class="project-index">03</span>
+                <h3>Editorial Design</h3>
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Graphic Design
+              </span>
 
             </div>
 
@@ -581,43 +474,45 @@
 
 
           <!-- PROJECT 04 -->
+
           <article
             class="project-card project-wide reveal"
-            data-category="video"
-            data-title="Editorial Stories — Multimedia"
-            data-type="Video & Editorial"
-            data-description="Editorial storytelling through interviews, photography, video and social-first visual packaging."
             tabindex="0"
             role="button"
-            aria-label="View editorial stories project"
+            data-category="photography"
+            data-title="Visual Storytelling — Photography"
+            data-type="Photography"
+            data-description="A visual storytelling project focused on authentic moments, people and environments through carefully composed photography."
           >
 
-            <div class="project-visual project-editorial">
+            <div class="project-visual project-photo">
 
-              <div class="editorial-big">
-                STORIES<br />
-                <em>MATTER.</em>
+              <div class="photo-overlay"></div>
+
+              <div class="photo-copy">
+
+                <span>04 / PHOTOGRAPHY</span>
+
+                <strong>
+                  PEOPLE.<br />
+                  PLACES.<br />
+                  STORIES.
+                </strong>
+
               </div>
-
-              <div class="editorial-side">
-                PHOTO / VIDEO<br />
-                JOURNALISM<br />
-                STORYTELLING
-              </div>
-
-              <div class="editorial-line"></div>
 
             </div>
-
 
             <div class="project-meta">
 
               <div>
-                <span>Video</span>
-                <h3>Editorial Stories</h3>
+                <span class="project-index">04</span>
+                <h3>Visual Storytelling</h3>
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Photography
+              </span>
 
             </div>
 
@@ -625,46 +520,44 @@
 
 
           <!-- PROJECT 05 -->
+
           <article
             class="project-card reveal"
-            data-category="photography"
-            data-title="Visual Portraits — Photography"
-            data-type="Photography"
-            data-description="Portrait-led visual storytelling exploring personality, environment and authentic human moments."
             tabindex="0"
             role="button"
-            aria-label="View visual portraits project"
+            data-category="video"
+            data-title="Brand Stories — Video Production"
+            data-type="Video Production"
+            data-description="Short-form video storytelling combining concept development, production, editing and visual direction for digital audiences."
           >
 
-            <div class="project-visual project-food">
+            <div class="project-visual project-video">
 
-              <div class="food-circle">
-                VISUAL<br />
-                <small>01</small>
+              <div class="video-play">▶</div>
+
+              <div class="video-label">
+                VIDEO / STORYTELLING
               </div>
 
-              <div class="food-copy">
-                PEOPLE.<br />
-                PLACES.<br />
-                STORIES.
-              </div>
-
-              <div class="pv-bottom">
-                <span>PHOTOGRAPHY</span>
-                <span>01</span>
+              <div class="video-bars">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
 
             </div>
 
-
             <div class="project-meta">
 
               <div>
-                <span>Photography</span>
-                <h3>Visual Portraits</h3>
+                <span class="project-index">05</span>
+                <h3>Brand Stories</h3>
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Video
+              </span>
 
             </div>
 
@@ -672,42 +565,41 @@
 
 
           <!-- PROJECT 06 -->
+
           <article
             class="project-card reveal"
-            data-category="motion"
-            data-title="Motion Stories — Visual Direction"
-            data-type="Motion Graphics"
-            data-description="Motion-led visual communication combining typography, composition and movement for digital platforms."
             tabindex="0"
             role="button"
-            aria-label="View motion stories project"
+            data-category="motion"
+            data-title="Motion Stories"
+            data-type="Motion Graphics"
+            data-description="Animated visual communication designed to add movement, rhythm and attention to digital campaigns and brand content."
           >
 
-            <div class="project-visual project-realestate">
+            <div class="project-visual project-motion">
 
-              <div class="re-label">
-                MOTION<br />
-                <strong>01</strong>
+              <div class="motion-word">
+                MOTION
               </div>
 
-              <div class="re-house"></div>
+              <div class="motion-circle"></div>
 
-              <div class="re-info">
-                <span>MOVING IDEAS</span>
-                <b>VANTERA</b>
+              <div class="motion-label">
+                06 / MOTION STORIES
               </div>
 
             </div>
 
-
             <div class="project-meta">
 
               <div>
-                <span>Motion</span>
+                <span class="project-index">06</span>
                 <h3>Motion Stories</h3>
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Motion Graphics
+              </span>
 
             </div>
 
@@ -722,291 +614,7 @@
             More projects coming soon.
           </span>
 
-          <a
-            href="#contact"
-            class="text-link dark-link"
-          >
-            Start a project <span>↗</span>
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         SERVICES
-    ========================== -->
-    <section
-      class="services section-dark"
-      id="services"
-    >
-
-      <div class="container">
-
-        <div class="section-head light reveal">
-
-          <div>
-
-            <p class="section-kicker">
-              03 / What we do
-            </p>
-
-            <h2>
-              Creative services<br />
-              <span>with purpose.</span>
-            </h2>
-
-          </div>
-
-          <p class="section-intro">
-            Choose one service or build an ongoing creative partnership around
-            your business.
-          </p>
-
-        </div>
-
-
-        <div class="service-list">
-
-
-          <!-- SERVICE 01 -->
-          <div class="service-item reveal">
-
-            <div class="service-no">
-              01
-            </div>
-
-            <div>
-
-              <h3>Brand Identity</h3>
-
-              <p>
-                Logo systems, visual identities, brand guidelines, stationery,
-                packaging and distinctive brand assets.
-              </p>
-
-            </div>
-
-            <span class="service-icon">↗</span>
-
-          </div>
-
-
-          <!-- SERVICE 02 -->
-          <div class="service-item reveal">
-
-            <div class="service-no">
-              02
-            </div>
-
-            <div>
-
-              <h3>Graphic Design</h3>
-
-              <p>
-                Campaigns, social content, posters, brochures, presentations,
-                reports and marketing collateral.
-              </p>
-
-            </div>
-
-            <span class="service-icon">↗</span>
-
-          </div>
-
-
-          <!-- SERVICE 03 -->
-          <div class="service-item reveal">
-
-            <div class="service-no">
-              03
-            </div>
-
-            <div>
-
-              <h3>Photography</h3>
-
-              <p>
-                Brand photography, portraits, products, property, events and
-                visual stories designed to give your brand a stronger presence.
-              </p>
-
-            </div>
-
-            <span class="service-icon">↗</span>
-
-          </div>
-
-
-          <!-- SERVICE 04 -->
-          <div class="service-item reveal">
-
-            <div class="service-no">
-              04
-            </div>
-
-            <div>
-
-              <h3>Video Production</h3>
-
-              <p>
-                Interviews, promotional videos, social-first video, event
-                coverage, reels and editorial multimedia production.
-              </p>
-
-            </div>
-
-            <span class="service-icon">↗</span>
-
-          </div>
-
-
-          <!-- SERVICE 05 -->
-          <div class="service-item reveal">
-
-            <div class="service-no">
-              05
-            </div>
-
-            <div>
-
-              <h3>Motion Graphics</h3>
-
-              <p>
-                Animated typography, visual explainers, branded motion systems
-                and dynamic content for digital platforms.
-              </p>
-
-            </div>
-
-            <span class="service-icon">↗</span>
-
-          </div>
-
-
-          <!-- SERVICE 06 -->
-          <div class="service-item reveal">
-
-            <div class="service-no">
-              06
-            </div>
-
-            <div>
-
-              <h3>Content & Campaigns</h3>
-
-              <p>
-                Integrated visual campaigns and content systems that connect
-                strategy, design, photography, video and social media.
-              </p>
-
-            </div>
-
-            <span class="service-icon">↗</span>
-
-          </div>
-
-        </div>
-
-
-        <div class="service-callout reveal">
-
-          <span>
-            Need ongoing creative support?
-          </span>
-
-          <a href="#contact">
-            Ask about monthly retainers
-            <b>↗</b>
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-    <section
-      class="about section-light"
-      id="about"
-    >
-
-      <div class="container about-grid">
-
-
-        <div class="about-photo reveal">
-
-          <div class="portrait-placeholder">
-
-            <span>JA</span>
-
-            <small>
-              JOHN AYODI
-            </small>
-
-          </div>
-
-          <div class="photo-label">
-            MULTIMEDIA DESIGNER<br />
-            VISUAL STORYTELLER
-          </div>
-
-        </div>
-
-
-        <div class="about-copy reveal delay-1">
-
-          <p class="section-kicker">
-            04 / About
-          </p>
-
-          <h2>
-            Design is not decoration.<br />
-            <span>It's communication.</span>
-          </h2>
-
-
-          <p>
-            I'm John Ayodi, the creative lead behind Vantera Creatives.
-            I'm a multimedia designer and visual storyteller based in Nairobi,
-            working across graphic design, branding, photography, video,
-            motion and journalism.
-          </p>
-
-
-          <p>
-            I care about the thinking behind the visual: the audience, the
-            message, the emotion and the action a piece of communication
-            should create.
-          </p>
-
-
-          <div class="skill-cloud">
-
-            <span>Adobe Photoshop</span>
-            <span>Illustrator</span>
-            <span>InDesign</span>
-            <span>Premiere Pro</span>
-            <span>After Effects</span>
-            <span>DaVinci Resolve</span>
-            <span>Photography</span>
-            <span>Videography</span>
-            <span>Editorial</span>
-
-          </div>
-
-
-          <a
-            href="#contact"
-            class="text-link dark-link"
-          >
+          <a href="#contact" class="text-link">
             Work with Vantera <span>↗</span>
           </a>
 
@@ -1018,12 +626,387 @@
 
 
     <!-- =========================
+         WHAT WE DO
+    ========================== -->
+
+    <section class="services section-dark" id="services">
+
+      <div class="container">
+
+        <div class="section-head services-head reveal">
+
+          <div>
+
+            <p class="section-kicker light">
+              03 / What we do
+            </p>
+
+            <h2>
+              Creative services
+              <br />
+              <span>built around your goals.</span>
+            </h2>
+
+          </div>
+
+          <p class="section-intro light">
+            From identity and design to photography, video and motion,
+            we create visual communication that helps brands stand out
+            and connect with their audience.
+          </p>
+
+        </div>
+
+
+        <div class="services-list">
+
+
+          <!-- SERVICE 01 -->
+
+          <article class="service-item reveal">
+
+            <div class="service-number">
+              01
+            </div>
+
+            <div class="service-content">
+
+              <h3>
+                Brand Identity
+              </h3>
+
+              <p>
+                We build distinctive visual identities that give businesses
+                clarity, character and a recognizable presence.
+              </p>
+
+              <div class="service-tags">
+
+                <span>Logo Design</span>
+                <span>Visual Identity</span>
+                <span>Brand Guidelines</span>
+                <span>Art Direction</span>
+
+              </div>
+
+              <a
+                href="#work"
+                class="service-link"
+                data-service-filter="branding"
+              >
+                View brand identity work <span>↗</span>
+              </a>
+
+            </div>
+
+            <div class="service-arrow">
+              ↗
+            </div>
+
+          </article>
+
+
+          <!-- SERVICE 02 -->
+
+          <article class="service-item reveal">
+
+            <div class="service-number">
+              02
+            </div>
+
+            <div class="service-content">
+
+              <h3>
+                Graphic Design
+              </h3>
+
+              <p>
+                We create purposeful visual communication for campaigns,
+                social media, publications, marketing and everyday brand needs.
+              </p>
+
+              <div class="service-tags">
+
+                <span>Campaign Design</span>
+                <span>Social Media</span>
+                <span>Editorial</span>
+                <span>Print</span>
+
+              </div>
+
+              <a
+                href="#work"
+                class="service-link"
+                data-service-filter="design"
+              >
+                View graphic design work <span>↗</span>
+              </a>
+
+            </div>
+
+            <div class="service-arrow">
+              ↗
+            </div>
+
+          </article>
+
+
+          <!-- SERVICE 03 -->
+
+          <article class="service-item reveal">
+
+            <div class="service-number">
+              03
+            </div>
+
+            <div class="service-content">
+
+              <h3>
+                Photography
+              </h3>
+
+              <p>
+                We create intentional imagery for brands, people, products
+                and campaigns — balancing technical quality with visual storytelling.
+              </p>
+
+              <div class="service-tags">
+
+                <span>Brand Photography</span>
+                <span>Portraits</span>
+                <span>Products</span>
+                <span>Editorial</span>
+
+              </div>
+
+              <a
+                href="#work"
+                class="service-link"
+                data-service-filter="photography"
+              >
+                View photography work <span>↗</span>
+              </a>
+
+            </div>
+
+            <div class="service-arrow">
+              ↗
+            </div>
+
+          </article>
+
+
+          <!-- SERVICE 04 -->
+
+          <article class="service-item reveal">
+
+            <div class="service-number">
+              04
+            </div>
+
+            <div class="service-content">
+
+              <h3>
+                Video Production
+              </h3>
+
+              <p>
+                From concept and scripting to filming and post-production,
+                we produce videos designed to tell stories and move audiences.
+              </p>
+
+              <div class="service-tags">
+
+                <span>Brand Films</span>
+                <span>Social Video</span>
+                <span>Interviews</span>
+                <span>Documentary</span>
+
+              </div>
+
+              <a
+                href="#work"
+                class="service-link"
+                data-service-filter="video"
+              >
+                View video work <span>↗</span>
+              </a>
+
+            </div>
+
+            <div class="service-arrow">
+              ↗
+            </div>
+
+          </article>
+
+
+          <!-- SERVICE 05 -->
+
+          <article class="service-item reveal">
+
+            <div class="service-number">
+              05
+            </div>
+
+            <div class="service-content">
+
+              <h3>
+                Motion Graphics
+              </h3>
+
+              <p>
+                We bring visual identities, campaigns and digital content
+                to life through purposeful animation and motion design.
+              </p>
+
+              <div class="service-tags">
+
+                <span>2D Animation</span>
+                <span>Logo Animation</span>
+                <span>Social Motion</span>
+                <span>Visual Effects</span>
+
+              </div>
+
+              <a
+                href="#work"
+                class="service-link"
+                data-service-filter="motion"
+              >
+                View motion work <span>↗</span>
+              </a>
+
+            </div>
+
+            <div class="service-arrow">
+              ↗
+            </div>
+
+          </article>
+
+
+          <!-- SERVICE 06 -->
+
+          <article class="service-item reveal">
+
+            <div class="service-number">
+              06
+            </div>
+
+            <div class="service-content">
+
+              <h3>
+                Content &amp; Campaigns
+              </h3>
+
+              <p>
+                We bring design, photography, video and storytelling together
+                to create cohesive campaigns built around a clear creative idea.
+              </p>
+
+              <div class="service-tags">
+
+                <span>Creative Campaigns</span>
+                <span>Content Strategy</span>
+                <span>Social Content</span>
+                <span>Art Direction</span>
+
+              </div>
+
+              <a
+                href="#work"
+                class="service-link"
+                data-service-filter="campaigns"
+              >
+                View campaign work <span>↗</span>
+              </a>
+
+            </div>
+
+            <div class="service-arrow">
+              ↗
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about section-light" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-label reveal">
+
+          <p class="section-kicker">
+            04 / About
+          </p>
+
+        </div>
+
+
+        <div class="about-content reveal">
+
+          <h2>
+            Vantera is a creative studio
+            built around <span>ideas, craft and impact.</span>
+          </h2>
+
+          <p>
+            We work with businesses, organizations and ambitious
+            individuals to transform ideas into compelling visual
+            experiences.
+          </p>
+
+          <p>
+            Our work sits at the intersection of design, storytelling
+            and multimedia production — giving brands the tools they
+            need to communicate with confidence in a crowded digital world.
+          </p>
+
+
+          <div class="about-founder">
+
+            <div class="founder-mark">
+              JA
+            </div>
+
+            <div>
+
+              <strong>
+                John Ayodi
+              </strong>
+
+              <span>
+                Founder &amp; Creative Lead
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
          PROCESS
     ========================== -->
-    <section
-      class="process section-light"
-      id="process"
-    >
+
+    <section class="process section-dark" id="process">
 
       <div class="container">
 
@@ -1031,16 +1014,22 @@
 
           <div>
 
-            <p class="section-kicker">
+            <p class="section-kicker light">
               05 / Process
             </p>
 
             <h2>
-              A simple process.<br />
-              <span>Serious thinking.</span>
+              From idea
+              <br />
+              <span>to execution.</span>
             </h2>
 
           </div>
+
+          <p class="section-intro light">
+            Good creative work starts with understanding the problem.
+            Our process keeps strategy, creativity and execution connected.
+          </p>
 
         </div>
 
@@ -1048,60 +1037,69 @@
         <div class="process-grid">
 
 
-          <div class="process-card reveal">
+          <article class="process-step reveal">
 
             <span>01</span>
 
-            <h3>Discover</h3>
+            <h3>
+              Discover
+            </h3>
 
             <p>
-              We understand your business, audience, goals and the problem
-              we're solving.
+              We understand your business, audience, objectives
+              and the problem the creative work needs to solve.
             </p>
 
-          </div>
+          </article>
 
 
-          <div class="process-card reveal">
+          <article class="process-step reveal">
 
             <span>02</span>
 
-            <h3>Define</h3>
+            <h3>
+              Define
+            </h3>
 
             <p>
-              We establish the creative direction, message, visual language
-              and deliverables.
+              We establish the creative direction, message,
+              visual language and deliverables.
             </p>
 
-          </div>
+          </article>
 
 
-          <div class="process-card reveal">
+          <article class="process-step reveal">
 
             <span>03</span>
 
-            <h3>Create</h3>
+            <h3>
+              Create
+            </h3>
 
             <p>
-              Ideas become purposeful visual systems through focused creative
-              development and production.
+              We develop, refine and produce the work with
+              attention to craft, consistency and detail.
             </p>
 
-          </div>
+          </article>
 
 
-          <div class="process-card reveal">
+          <article class="process-step reveal">
 
             <span>04</span>
 
-            <h3>Deliver</h3>
+            <h3>
+              Deliver
+            </h3>
 
             <p>
-              Final assets are refined, packaged and prepared for the
-              platforms where they will live.
+              Final assets are prepared for their intended platforms,
+              audiences and real-world applications.
             </p>
 
-          </div>
+          </article>
+
 
         </div>
 
@@ -1113,22 +1111,24 @@
     <!-- =========================
          CREATIVE PRINCIPLE
     ========================== -->
-    <section class="testimonial section-orange">
+
+    <section class="testimonial section-light">
 
       <div class="container testimonial-inner reveal">
 
         <p class="section-kicker">
-          06 / Creative principle
+          Creative principle
         </p>
 
         <blockquote>
-          “Good creative work should make a business feel more confident
-          about showing up in the world.”
+          “Good design gets attention.
+          Great storytelling gives people
+          a reason to remember.”
         </blockquote>
 
-        <div class="quote-mark">
-          V
-        </div>
+        <span>
+          — Vantera Creatives
+        </span>
 
       </div>
 
@@ -1138,10 +1138,8 @@
     <!-- =========================
          INSIGHTS
     ========================== -->
-    <section
-      class="insights section-light"
-      id="insights"
-    >
+
+    <section class="insights section-light" id="insights">
 
       <div class="container">
 
@@ -1150,19 +1148,20 @@
           <div>
 
             <p class="section-kicker">
-              07 / Insights
+              06 / Insights
             </p>
 
             <h2>
-              Ideas worth<br />
-              <span>thinking about.</span>
+              Ideas worth
+              <br />
+              <span>exploring.</span>
             </h2>
 
           </div>
 
           <p class="section-intro">
-            Perspectives on design, media, storytelling and the creative
-            industry from the Vantera studio.
+            Thoughts on design, storytelling, creativity,
+            business and the changing visual culture around us.
           </p>
 
         </div>
@@ -1173,90 +1172,63 @@
 
           <article class="insight-card reveal">
 
-            <div class="insight-number">
+            <span class="insight-number">
               01
-            </div>
-
-            <div>
-
-              <p class="insight-type">
-                Creative Thinking
-              </p>
-
-              <h3>
-                Why good design starts with a better question.
-              </h3>
-
-              <p>
-                A look at why understanding the problem often matters more
-                than jumping straight into visual execution.
-              </p>
-
-            </div>
-
-            <span class="insight-arrow">
-              ↗
             </span>
+
+            <span class="insight-category">
+              DESIGN
+            </span>
+
+            <h3>
+              Why distinctive visual identities matter for growing businesses.
+            </h3>
+
+            <a href="#contact" class="text-link">
+              Read more <span>↗</span>
+            </a>
 
           </article>
 
 
           <article class="insight-card reveal">
 
-            <div class="insight-number">
+            <span class="insight-number">
               02
-            </div>
-
-            <div>
-
-              <p class="insight-type">
-                Visual Culture
-              </p>
-
-              <h3>
-                What makes a brand memorable in a crowded feed?
-              </h3>
-
-              <p>
-                Exploring the relationship between visual identity,
-                consistency, context and attention.
-              </p>
-
-            </div>
-
-            <span class="insight-arrow">
-              ↗
             </span>
+
+            <span class="insight-category">
+              STORYTELLING
+            </span>
+
+            <h3>
+              The difference between creating content and telling a story.
+            </h3>
+
+            <a href="#contact" class="text-link">
+              Read more <span>↗</span>
+            </a>
 
           </article>
 
 
           <article class="insight-card reveal">
 
-            <div class="insight-number">
+            <span class="insight-number">
               03
-            </div>
-
-            <div>
-
-              <p class="insight-type">
-                Storytelling
-              </p>
-
-              <h3>
-                From information to stories people actually remember.
-              </h3>
-
-              <p>
-                How journalism, design and multimedia can work together to
-                make communication more human.
-              </p>
-
-            </div>
-
-            <span class="insight-arrow">
-              ↗
             </span>
+
+            <span class="insight-category">
+              CREATIVE BUSINESS
+            </span>
+
+            <h3>
+              What ambitious brands should expect from a creative partner.
+            </h3>
+
+            <a href="#contact" class="text-link">
+              Read more <span>↗</span>
+            </a>
 
           </article>
 
@@ -1271,71 +1243,42 @@
     <!-- =========================
          CONTACT
     ========================== -->
-    <section
-      class="contact section-dark"
-      id="contact"
-    >
+
+    <section class="contact section-dark" id="contact">
 
       <div class="container contact-grid">
 
 
         <div class="contact-copy reveal">
 
-          <p class="section-kicker">
-            08 / Start a project
+          <p class="section-kicker light">
+            07 / Start a project
           </p>
 
           <h2>
-            Have an idea?<br />
+            Have an idea?
+            <br />
             <span>Let's build it.</span>
           </h2>
 
           <p>
-            Tell me what you're working on. Whether you need a new identity,
-            campaign, content or ongoing creative support, let's start with
-            a conversation.
+            Tell us what you're working on, what you need
+            and where you want to take it.
           </p>
 
 
           <div class="contact-details">
 
             <a href="mailto:hello@vanteracreatives.com">
-
-              <small>Email</small>
-
-              <strong>
-                hello@vanteracreatives.com
-              </strong>
-
+              hello@vanteracreatives.com
             </a>
 
-
-            <a
-              href="https://wa.me/254700000000"
-              target="_blank"
-              rel="noopener"
-            >
-
-              <small>WhatsApp</small>
-
-              <strong>
-                Start a conversation ↗
-              </strong>
-
+            <a href="https://wa.me/254700000000" target="_blank" rel="noopener">
+              WhatsApp ↗
             </a>
 
-
-            <a
-              href="#"
-              aria-label="Instagram profile"
-            >
-
-              <small>Instagram</small>
-
-              <strong>
-                @vanteracreatives ↗
-              </strong>
-
+            <a href="#" aria-label="Vantera Creatives on Instagram">
+              Instagram ↗
             </a>
 
           </div>
@@ -1343,21 +1286,17 @@
         </div>
 
 
-        <!-- Contact form -->
-        <form
-          class="contact-form reveal delay-1"
-          id="contactForm"
-        >
+        <form class="contact-form reveal" id="contactForm">
 
           <div class="form-row">
 
             <label>
-              What's your name?
+              Your name
 
               <input
                 type="text"
                 name="name"
-                placeholder="Your name"
+                placeholder="John Doe"
                 required
               />
 
@@ -1365,7 +1304,7 @@
 
 
             <label>
-              Email address
+              Email
 
               <input
                 type="email"
@@ -1385,7 +1324,7 @@
             <input
               type="text"
               name="business"
-              placeholder="Your business name"
+              placeholder="Your business"
             />
 
           </label>
@@ -1394,28 +1333,39 @@
           <label>
             What do you need?
 
-            <select
-              name="service"
-              required
-            >
+            <select name="service" required>
 
-              <option
-                value=""
-                disabled
-                selected
-              >
+              <option value="">
                 Select a service
               </option>
 
-              <option>Brand Identity</option>
-              <option>Graphic Design</option>
-              <option>Social Media Content</option>
-              <option>Photography</option>
-              <option>Videography</option>
-              <option>Motion Graphics</option>
-              <option>Content & Campaigns</option>
-              <option>Monthly Creative Retainer</option>
-              <option>Other</option>
+              <option value="Brand Identity">
+                Brand Identity
+              </option>
+
+              <option value="Graphic Design">
+                Graphic Design
+              </option>
+
+              <option value="Photography">
+                Photography
+              </option>
+
+              <option value="Video Production">
+                Video Production
+              </option>
+
+              <option value="Motion Graphics">
+                Motion Graphics
+              </option>
+
+              <option value="Content & Campaigns">
+                Content &amp; Campaigns
+              </option>
+
+              <option value="Multiple services">
+                Multiple services
+              </option>
 
             </select>
 
@@ -1423,12 +1373,12 @@
 
 
           <label>
-            Tell me about the project
+            Tell us about the project
 
             <textarea
               name="message"
-              rows="5"
-              placeholder="What are you trying to achieve? What's the deadline?"
+              rows="6"
+              placeholder="Tell us what you're working on..."
               required
             ></textarea>
 
@@ -1437,24 +1387,13 @@
 
           <button
             type="submit"
-            class="btn btn-primary submit-btn"
+            class="btn btn-primary form-submit"
           >
-            Send project enquiry <span>↗</span>
+            Send enquiry <span>↗</span>
           </button>
 
 
-          <p class="form-note">
-            Submitting opens your email client with the enquiry prepared.
-            Replace the email and WhatsApp details in
-            <code>index.html</code> with your real contacts.
-          </p>
-
-
-          <div
-            class="form-success"
-            role="status"
-            aria-live="polite"
-          ></div>
+          <p class="form-success" aria-live="polite"></p>
 
         </form>
 
@@ -1468,41 +1407,62 @@
   <!-- =========================
        FOOTER
   ========================== -->
-  <footer class="footer section-dark">
 
-    <div class="container footer-top">
+  <footer class="site-footer">
 
-      <a
-        class="wordmark footer-wordmark"
-        href="#top"
-      >
-        VANTERA<i></i>
-      </a>
+    <div class="container footer-grid">
 
-      <p>
-        Branding · Design · Multimedia
-      </p>
+      <div>
 
-      <a
-        href="#top"
-        class="back-top"
-      >
-        Back to top ↑
-      </a>
+        <a href="#top" class="wordmark">
+          <span>VANTERA</span><i>/</i>
+        </a>
 
-    </div>
+        <p>
+          Creative direction, design and multimedia
+          for brands with something to say.
+        </p>
+
+      </div>
 
 
-    <div class="container footer-bottom">
+      <div class="footer-links">
 
-      <span>
-        © <span id="year"></span>
-        Vantera Creatives. All rights reserved.
-      </span>
+        <a href="#work">
+          Work
+        </a>
 
-      <span>
-        Designed & built by John Ayodi.
-      </span>
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#insights">
+          Insights
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="year"></span> Vantera Creatives.
+          All rights reserved.
+        </span>
+
+        <a href="#top">
+          Back to top ↑
+        </a>
+
+      </div>
 
     </div>
 
@@ -1512,24 +1472,19 @@
   <!-- =========================
        PROJECT MODAL
   ========================== -->
+
   <div
-    class="modal"
+    class="project-modal"
     id="projectModal"
     aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
   >
 
-    <div
-      class="modal-backdrop"
-      data-close-modal
-    ></div>
+    <div class="modal-backdrop" data-close-modal></div>
 
-
-    <div
-      class="modal-panel"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modalTitle"
-    >
+    <div class="modal-panel">
 
       <button
         class="modal-close"
@@ -1540,29 +1495,18 @@
         ×
       </button>
 
-
-      <p
-        class="section-kicker"
-        id="modalType"
-      >
-        Project
-      </p>
-
+      <span id="modalType">
+        Selected work
+      </span>
 
       <h2 id="modalTitle">
-        Project title
+        Project
       </h2>
-
 
       <p id="modalDescription"></p>
 
-
-      <a
-        href="#contact"
-        class="btn btn-primary"
-        data-close-modal
-      >
-        Discuss a similar project ↗
+      <a href="#contact" class="btn btn-primary" data-close-modal>
+        Discuss a similar project <span>↗</span>
       </a>
 
     </div>
@@ -1570,7 +1514,6 @@
   </div>
 
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 
 </body>
