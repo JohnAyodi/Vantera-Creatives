@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0E1521" />
 
   <meta
     name="description"
-    content="Vantera Creatives — a Nairobi creative studio specializing in branding, graphic design, photography, video, motion and visual storytelling."
+    content="Vantera Creatives — A Nairobi creative studio working across brand identity, graphic design, photography, video, motion and campaigns."
   />
 
   <meta
@@ -22,9 +21,10 @@
 
   <meta property="og:type" content="website" />
 
+  <meta name="theme-color" content="#0E1521" />
+
   <title>Vantera Creatives — Branding • Design • Multimedia</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -33,933 +33,34 @@
     rel="stylesheet"
   />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    /* Expanded Services / Service accordion */
-    .service-accordion-item {
-      position: relative;
-      cursor: pointer;
-      transition: padding .35s ease, border-color .35s ease;
-    }
-
-    .service-accordion-item:focus-visible {
-      outline: 2px solid #FC692E;
-      outline-offset: 4px;
-    }
-
-    .service-accordion-item.is-open {
-      padding-bottom: 1.5rem;
-    }
-
-    .service-heading {
-      min-width: 0;
-    }
-
-    .service-details {
-      display: block;
-      padding-top: 1.5rem;
-      animation: serviceReveal .35s ease both;
-    }
-
-    .service-project-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: .75rem;
-    }
-
-    .service-project {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: .8rem;
-      align-items: start;
-      padding: 1rem;
-      background: rgba(255,255,255,.045);
-      border: 1px solid rgba(255,255,255,.12);
-      transition: transform .25s ease, border-color .25s ease, background .25s ease;
-    }
-
-    .service-project:hover {
-      transform: translateY(-3px);
-      border-color: rgba(252,105,46,.75);
-      background: rgba(252,105,46,.07);
-    }
-
-    .service-project-number {
-      color: #FC692E;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      padding-top: .1rem;
-    }
-
-    .service-project strong {
-      display: block;
-      font-family: "MuseoModerno", sans-serif;
-      font-size: .98rem;
-      line-height: 1.2;
-      margin-bottom: .35rem;
-    }
-
-    .service-project span {
-      display: block;
-      font-size: .78rem;
-      opacity: .68;
-      line-height: 1.45;
-    }
-
-    .service-project b {
-      color: #FC692E;
-      font-size: 1rem;
-      transition: transform .2s ease;
-    }
-
-    .service-project:hover b {
-      transform: translate(2px,-2px);
-    }
-
-    .service-accordion-item .service-icon {
-      transition: transform .3s ease, color .3s ease;
-    }
-
-    .service-accordion-item.is-open .service-icon {
-      transform: rotate(45deg);
-      color: #FC692E;
-    }
-
-    @keyframes serviceReveal {
-      from { opacity: 0; transform: translateY(-8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 900px) {
-      .service-project-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Project detail viewer */
-    .project-modal-gallery {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .project-modal-gallery .project-image-card {
-      position: relative;
-      min-height: 220px;
-      overflow: hidden;
-      background: #f3f4f6;
-      border: 1px solid rgba(14,21,33,.12);
-    }
-
-    .project-modal-gallery .project-image-card.featured {
-      grid-column: 1 / -1;
-      min-height: 430px;
-    }
-
-    .project-modal-gallery img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      background: #eef0f3;
-    }
-
-    .project-image-fallback {
-      min-height: inherit;
-      display: grid;
-      place-items: center;
-      padding: 1.5rem;
-      text-align: center;
-      color: rgba(14,21,33,.62);
-      font-size: .82rem;
-      line-height: 1.5;
-    }
-
-    .project-modal-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-top: 1.25rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(14,21,33,.1);
-    }
-
-    .project-modal-hint {
-      font-size: .76rem;
-      line-height: 1.45;
-      opacity: .65;
-    }
-
-    .service-project {
-      cursor: pointer;
-    }
-
-    .service-project b {
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 700px) {
-      .project-modal-gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .project-modal-gallery .project-image-card.featured {
-        grid-column: auto;
-        min-height: 320px;
-      }
-
-      .project-modal-footer {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-  
-    /* Services visual split redesign */
-    .services-redesign {
-      overflow: clip;
-    }
-
-    .services-stage {
-      display: grid;
-      grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
-      gap: clamp(2.5rem, 6vw, 6rem);
-      align-items: start;
-    }
-
-    .services-copy {
-      min-width: 0;
-    }
-
-    .services-heading {
-      margin-bottom: clamp(1.75rem, 4vw, 3rem);
-    }
-
-    .services-heading h2 {
-      margin: .45rem 0 .85rem;
-      font-size: clamp(2.2rem, 4vw, 4rem);
-      line-height: .98;
-    }
-
-    .services-intro {
-      max-width: 36rem;
-      font-size: .94rem;
-      line-height: 1.65;
-      opacity: .68;
-    }
-
-    .service-list-compact {
-      border-top: 1px solid rgba(255,255,255,.13);
-    }
-
-    .service-list-compact .service-item {
-      padding: 1rem 0;
-      border-bottom: 1px solid rgba(255,255,255,.13);
-      display: grid;
-      grid-template-columns: 2.5rem minmax(0,1fr);
-      gap: .5rem;
-      align-items: start;
-    }
-
-    .service-list-compact .service-item.is-open {
-      padding-bottom: 1.2rem;
-    }
-
-    .service-list-compact .service-no {
-      font-size: .68rem;
-      letter-spacing: .12em;
-      opacity: .46;
-      padding-top: .3rem;
-    }
-
-    .service-title-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .service-list-compact .service-heading h3 {
-      margin: 0;
-      font-size: clamp(1.08rem, 1.8vw, 1.48rem);
-      line-height: 1.2;
-      font-weight: 600;
-    }
-
-    .service-list-compact .service-heading > p {
-      margin: .28rem 0 0;
-      font-size: .8rem;
-      line-height: 1.5;
-      opacity: .56;
-      max-width: 36rem;
-    }
-
-    .service-list-compact .service-icon {
-      flex: 0 0 auto;
-      width: 1.7rem;
-      height: 1.7rem;
-      border: 1px solid rgba(255,255,255,.18);
-      display: grid;
-      place-items: center;
-      font-size: 1rem;
-    }
-
-    .service-list-compact .service-details {
-      padding-top: 1rem;
-    }
-
-    .service-project-list {
-      display: grid;
-      gap: .4rem;
-      padding-left: .15rem;
-      border-left: 1px solid rgba(252,105,46,.35);
-    }
-
-    .service-list-compact .service-project {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: .72rem .8rem;
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.08);
-      cursor: pointer;
-    }
-
-    .service-list-compact .service-project strong {
-      font-size: .82rem;
-      font-weight: 500;
-      line-height: 1.35;
-    }
-
-    .service-list-compact .service-project b {
-      flex: 0 0 auto;
-      color: #FC692E;
-      font-size: .68rem;
-      letter-spacing: .08em;
-    }
-
-    .services-visual {
-      position: sticky;
-      top: 6.5rem;
-    }
-
-    .services-visual-frame {
-      background: #0a111b;
-      border: 1px solid rgba(255,255,255,.13);
-      padding: .7rem;
-    }
-
-    .services-visual-media {
-      position: relative;
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 65% 25%, rgba(252,105,46,.18), transparent 34%),
-        linear-gradient(145deg, #111d2e 0%, #09111d 62%, #192b65 120%);
-    }
-
-    .services-visual-media::before {
-      content: '';
-      position: absolute;
-      inset: 8%;
-      border: 1px solid rgba(255,255,255,.09);
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    .services-visual-media img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: opacity .35s ease, transform .6s ease;
-    }
-
-    .services-visual-media img.is-changing {
-      opacity: .18;
-      transform: scale(1.02);
-    }
-
-    .services-visual-fallback {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 2rem;
-      background:
-        radial-gradient(circle at 68% 26%, rgba(252,105,46,.12), transparent 28%),
-        linear-gradient(145deg, rgba(10,18,29,.94), rgba(25,43,101,.74));
-      color: rgba(255,255,255,.74);
-      z-index: 1;
-    }
-
-    .services-visual-fallback span {
-      display: block;
-      font-size: .62rem;
-      letter-spacing: .18em;
-      color: #FC692E;
-      margin-bottom: .6rem;
-    }
-
-    .services-visual-fallback strong {
-      display: block;
-      font-family: 'MuseoModerno', sans-serif;
-      font-size: clamp(1.3rem, 3vw, 2.2rem);
-      color: #fff;
-    }
-
-    .services-visual-meta {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1rem .35rem .25rem;
-    }
-
-    .services-visual-meta > div span {
-      display: block;
-      font-size: .62rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.5);
-      margin-bottom: .35rem;
-    }
-
-    .services-visual-meta h3 {
-      margin: 0;
-      font-size: 1.35rem;
-      line-height: 1.1;
-    }
-
-    .services-visual-index {
-      font-family: 'MuseoModerno', sans-serif;
-      color: #FC692E;
-      font-size: .78rem;
-      letter-spacing: .1em;
-    }
-
-    .services-visual-note {
-      margin: .8rem 0 0;
-      font-size: .72rem;
-      line-height: 1.5;
-      opacity: .42;
-    }
-
-    @media (max-width: 980px) {
-      .services-stage {
-        grid-template-columns: 1fr;
-      }
-
-      .services-visual {
-        position: relative;
-        top: auto;
-        order: -1;
-      }
-
-      .services-visual-media {
-        aspect-ratio: 16 / 9;
-      }
-    }
-
-    @media (max-width: 620px) {
-      .service-list-compact .service-item {
-        grid-template-columns: 2rem minmax(0,1fr);
-      }
-
-      .service-list-compact .service-heading > p {
-        font-size: .76rem;
-      }
-
-      .services-visual-meta h3 {
-        font-size: 1.15rem;
-      }
-    }
-
-
-    /* Compact full-viewport services layout */
-    @media (min-width: 981px) {
-      .services-redesign {
-        min-height: calc(100vh - 72px);
-        height: calc(100vh - 72px);
-        padding-top: clamp(1.4rem, 2.4vh, 2.2rem);
-        padding-bottom: clamp(1.2rem, 2vh, 1.8rem);
-        overflow: hidden;
-      }
-
-      .services-redesign > .container {
-        height: 100%;
-      }
-
-      .services-stage {
-        height: 100%;
-        grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr);
-        gap: clamp(1.5rem, 3vw, 3.5rem);
-        align-items: stretch;
-      }
-
-      .services-copy {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-      }
-
-      .services-heading {
-        margin-bottom: clamp(.65rem, 1.2vh, 1rem);
-      }
-
-      .services-heading h2 {
-        font-size: clamp(1.65rem, 2.5vw, 2.55rem);
-        line-height: .96;
-        margin: .28rem 0 .45rem;
-      }
-
-      .services-intro {
-        max-width: 30rem;
-        font-size: .78rem;
-        line-height: 1.45;
-      }
-
-      .service-list-compact {
-        flex: 1;
-        min-height: 0;
-        overflow: visible;
-      }
-
-      .service-list-compact .service-item {
-        padding: .52rem 0;
-        grid-template-columns: 1.9rem minmax(0,1fr);
-        gap: .35rem;
-      }
-
-      .service-list-compact .service-item.is-open {
-        padding-bottom: .65rem;
-      }
-
-      .service-list-compact .service-no {
-        font-size: .58rem;
-        padding-top: .18rem;
-      }
-
-      .service-list-compact .service-heading h3 {
-        font-size: clamp(.9rem, 1.35vw, 1.12rem);
-        line-height: 1.08;
-      }
-
-      .service-list-compact .service-heading > p {
-        margin: .18rem 0 0;
-        font-size: .66rem;
-        line-height: 1.35;
-        max-width: 28rem;
-      }
-
-      .service-list-compact .service-icon {
-        width: 1.35rem;
-        height: 1.35rem;
-        font-size: .8rem;
-      }
-
-      .service-list-compact .service-details {
-        padding-top: .55rem;
-      }
-
-      .service-project-list {
-        gap: .25rem;
-      }
-
-      .service-list-compact .service-project {
-        padding: .48rem .6rem;
-      }
-
-      .service-list-compact .service-project strong {
-        font-size: .69rem;
-      }
-
-      .service-list-compact .service-project b {
-        font-size: .58rem;
-      }
-
-      .services-visual {
-        position: relative;
-        top: auto;
-        height: 100%;
-        min-height: 0;
-      }
-
-      .services-visual-frame {
-        height: 100%;
-        padding: 0;
-        border: 1px solid rgba(255,255,255,.13);
-        display: flex;
-        flex-direction: column;
-      }
-
-      .services-visual-media {
-        flex: 1;
-        min-height: 0;
-        aspect-ratio: auto;
-      }
-
-      .services-visual-media::before {
-        inset: 5%;
-      }
-
-      .services-visual-meta {
-        padding: .7rem .9rem .65rem;
-      }
-
-      .services-visual-meta h3 {
-        font-size: 1rem;
-      }
-
-      .services-visual-note {
-        display: none;
-      }
-    }
-
-    /* About John modal */
-    .about-john-btn {
-      appearance: none;
-      border: 0;
-      background: none;
-      font: inherit;
-      color: inherit;
-      cursor: pointer;
-      padding: 0;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-    .about-john-btn:hover { text-decoration: underline; text-underline-offset: 0.28em; }
-    .about-cta-row {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-    .about-socials-inline {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-left: 2px;
-    }
-    .about-social-icon {
-      width: 34px;
-      height: 34px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(25,43,101,.18);
-      border-radius: 50%;
-      color: #192b65;
-      background: rgba(255,255,255,.7);
-      text-decoration: none;
-      transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
-    }
-    .about-social-icon:hover {
-      transform: translateY(-2px);
-      background: #192b65;
-      color: #fff;
-      border-color: #192b65;
-    }
-    .about-social-icon.whatsapp:hover {
-      background: #fc692e;
-      border-color: #fc692e;
-      color: #0e1521;
-    }
-    .about-social-icon svg {
-      width: 16px;
-      height: 16px;
-      fill: currentColor;
-    }
-    .about-john-modal {
-      position: fixed;
-      inset: 0;
-      z-index: 10001;
-      display: none;
-    }
-    .about-john-modal.open { display: block; }
-    .about-john-backdrop {
-      position: absolute;
-      inset: 0;
-      background: rgba(5, 10, 18, 0.78);
-      backdrop-filter: blur(10px);
-    }
-    .about-john-panel {
-      position: relative;
-      width: min(960px, calc(100% - 32px));
-      max-height: min(88vh, 900px);
-      margin: 6vh auto 0;
-      overflow: auto;
-      background: #f4f1ea;
-      color: #101923;
-      border: 1px solid rgba(25, 43, 101, 0.15);
-      box-shadow: 0 32px 90px rgba(0,0,0,.35);
-      padding: clamp(28px, 5vw, 64px);
-    }
-    .about-john-close {
-      position: sticky;
-      top: 0;
-      margin-left: auto;
-      display: block;
-      width: 44px;
-      height: 44px;
-      border: 1px solid rgba(25,43,101,.18);
-      border-radius: 50%;
-      background: rgba(255,255,255,.75);
-      color: #192b65;
-      cursor: pointer;
-      font-size: 1.6rem;
-      line-height: 1;
-      z-index: 2;
-    }
-    .about-john-header {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-      margin-top: -24px;
-      margin-bottom: 38px;
-      padding-right: 54px;
-    }
-    .about-john-kicker {
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      color: #fc692e;
-      font-weight: 700;
-    }
-    .about-john-header h2 {
-      margin: 0;
-      font-size: clamp(2.2rem, 6vw, 5.2rem);
-      line-height: .95;
-      color: #192b65;
-    }
-    .about-john-header p {
-      margin: 0;
-      max-width: 720px;
-      font-size: 1.04rem;
-      line-height: 1.75;
-      color: rgba(16,25,35,.78);
-    }
-    .about-john-article {
-      max-width: 780px;
-      font-size: 1.06rem;
-      line-height: 1.85;
-    }
-    .about-john-article h3 {
-      margin: 34px 0 12px;
-      color: #192b65;
-      font-size: 1.1rem;
-    }
-    .about-john-article p { margin: 0 0 18px; }
-    .about-john-article .pullquote {
-      margin: 30px 0;
-      padding: 22px 24px;
-      border-left: 4px solid #fc692e;
-      background: rgba(252,105,46,.06);
-      color: #192b65;
-      font-family: MuseoModerno, sans-serif;
-      font-size: 1.35rem;
-      line-height: 1.3;
-    }
-    .about-john-socials {
-      margin-top: 44px;
-      padding-top: 28px;
-      border-top: 1px solid rgba(25,43,101,.15);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .about-john-social {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 46px;
-      padding: 0 18px;
-      border: 1px solid rgba(25,43,101,.22);
-      color: #192b65;
-      text-decoration: none;
-      background: white;
-      transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
-    }
-    .about-john-social:hover {
-      transform: translateY(-2px);
-      background: #192b65;
-      color: #fff;
-      border-color: #192b65;
-    }
-    .about-john-social.whatsapp:hover {
-      background: #fc692e;
-      border-color: #fc692e;
-    }
-    .about-john-cv {
-      margin-top: 34px;
-      padding: 24px;
-      border: 1px solid rgba(25,43,101,.16);
-      background: rgba(255,255,255,.72);
-    }
-    .about-john-cv-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 14px;
-    }
-    .about-john-cv-head h3 {
-      margin: 0;
-      font-family: MuseoModerno, sans-serif;
-      font-size: 1.25rem;
-      color: #192b65;
-    }
-    .about-john-cv-head span {
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      color: #fc692e;
-      font-weight: 700;
-    }
-    .about-john-cv-copy {
-      margin: 0 0 16px;
-      font-size: .9rem;
-      line-height: 1.6;
-      color: rgba(16,25,35,.72);
-    }
-    .about-john-cv-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-    .about-john-cv-link,
-    .about-john-cv-upload {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 44px;
-      padding: 0 16px;
-      border: 1px solid rgba(25,43,101,.22);
-      background: #fff;
-      color: #192b65;
-      text-decoration: none;
-      font: 700 .78rem/1 Satoshi, Arial, sans-serif;
-      cursor: pointer;
-    }
-    .about-john-cv-link.primary {
-      background: #fc692e;
-      border-color: #fc692e;
-      color: #0e1521;
-    }
-    .about-john-cv-link:hover,
-    .about-john-cv-upload:hover {
-      transform: translateY(-1px);
-      border-color: #192b65;
-    }
-    .about-john-cv-file {
-      font-size: .76rem;
-      color: rgba(16,25,35,.58);
-    }
-    .about-john-cv-editor {
-      display: none;
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px dashed rgba(25,43,101,.18);
-    }
-    body.vc-editing .about-john-cv-editor { display: block; }
-    .about-john-cv-editor input { display: none; }
-    @media (max-width: 700px) {
-      .about-john-cv { padding: 20px; }
-      .about-john-cv-head { align-items: flex-start; flex-direction: column; }
-      .about-john-cv-link, .about-john-cv-upload { flex: 1 1 100%; }
-    }
-    body.about-john-open { overflow: hidden; }
-    @media (max-width: 700px) {
-      .about-john-panel { width: calc(100% - 18px); margin: 2vh auto 0; max-height: 96vh; padding: 24px 20px 32px; }
-      .about-john-header { padding-right: 42px; margin-top: -14px; }
-      .about-john-social { flex: 1 1 100%; }
-    }
-</style>
-
-
-<style id="vantera-editor-styles">
-  /* =========================
-     VANTERA VISUAL EDITOR
-  ========================== */
-  .vc-editor-toggle{position:fixed;right:18px;bottom:18px;z-index:99999;border:1px solid rgba(255,255,255,.18);background:#192B65;color:#fff;padding:.8rem 1rem;border-radius:999px;font:700 .78rem/1 "Satoshi",Arial,sans-serif;letter-spacing:.05em;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.25)}
-  .vc-editor-toggle.is-active{background:#FC692E;color:#0E1521}
-  .vc-editor-panel{position:fixed;top:18px;right:18px;z-index:99998;width:min(360px,calc(100vw - 36px));max-height:calc(100vh - 36px);overflow:auto;background:#0E1521;color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.35);padding:16px;display:none}
-  .vc-editor-panel.open{display:block}
-  .vc-editor-panel h3{margin:0 0 8px;font-family:"MuseoModerno",sans-serif;font-size:1rem}
-  .vc-editor-panel p{margin:0 0 14px;font-size:.78rem;line-height:1.5;opacity:.72}
-  .vc-editor-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .vc-editor-field{display:grid;gap:6px}
-  .vc-editor-field label{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
-  .vc-editor-field input[type=color]{width:100%;height:42px;border:0;border-radius:10px;background:#fff;padding:4px}
-  .vc-editor-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
-  .vc-editor-btn{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;padding:.75rem .85rem;border-radius:10px;cursor:pointer;font-weight:700;font-size:.74rem}
-  .vc-editor-btn.primary{background:#FC692E;color:#0E1521;border-color:#FC692E}
-  .vc-editor-btn.full{grid-column:1/-1}
-  .vc-editor-status{font-size:.72rem;margin-top:10px;min-height:1em;opacity:.72}
-  body.vc-editing [data-vc-editable="true"]{outline:1px dashed rgba(252,105,46,.9);outline-offset:3px;cursor:text}
-  body.vc-editing [data-vc-editable="true"]:focus{outline:2px solid #FC692E;background:rgba(252,105,46,.06)}
-  body.vc-editing img[data-vc-image="true"]{outline:1px dashed rgba(252,105,46,.9);outline-offset:4px;cursor:pointer}
-  .vc-image-pop{position:fixed;inset:0;background:rgba(8,12,18,.72);backdrop-filter:blur(6px);display:grid;place-items:center;z-index:100000;padding:20px}
-  .vc-image-pop-card{width:min(420px,100%);background:#fff;color:#111;border-radius:18px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
-  .vc-image-pop-card h4{margin:0 0 8px;font-family:"MuseoModerno",sans-serif}
-  .vc-image-pop-card p{font-size:.8rem;line-height:1.5;opacity:.7;margin:0 0 12px}
-  .vc-image-pop-card input{width:100%}
-
-  /* About section dual CTA */
-  .about-cta-row{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-top:1.5rem}
-  .about-john-btn{display:inline-flex;align-items:center;gap:.55rem;border:1px solid currentColor;padding:.75rem 1rem;border-radius:999px;text-decoration:none;color:inherit;font-weight:700;letter-spacing:.01em;transition:all .25s ease}
-  .about-john-btn:hover{background:#192B65;color:#fff;border-color:#192B65;transform:translateY(-1px)}
-  .about-john-btn span{font-size:1rem;line-height:1}
-  @media (max-width:700px){.vc-editor-toggle{right:12px;bottom:12px}.vc-editor-panel{top:12px;right:12px}.about-cta-row{align-items:flex-start;gap:.9rem}}
-</style>
-
 </head>
 
 <body>
 
-  <!-- Subtle page texture -->
-  <div class="page-noise" aria-hidden="true"></div>
+  <!-- =====================================
+       HEADER / NAVIGATION
+  ====================================== -->
 
-  <!-- =========================
-       HEADER
-  ========================== -->
   <header class="site-header" id="top">
 
     <nav class="nav container" aria-label="Primary navigation">
 
-      <a
-        class="wordmark"
-        href="#top"
-        aria-label="Vantera Creatives home"
-      >
-        <span>VANTERA</span>
-        <i></i>
+      <a href="#top" class="wordmark" aria-label="Vantera Creatives home">
+        <span>VANTERA</span><i>/</i>
       </a>
 
       <button
         class="menu-toggle"
-        type="button"
-        aria-label="Open menu"
+        aria-label="Open navigation"
         aria-expanded="false"
-        aria-controls="primary-navigation"
+        type="button"
       >
         <span></span>
         <span></span>
       </button>
 
-      <div class="nav-links" id="primary-navigation">
+      <div class="nav-links">
 
         <a href="#work">Work</a>
 
@@ -969,10 +70,7 @@
 
         <a href="#insights">Insights</a>
 
-        <a
-          href="#contact"
-          class="nav-cta"
-        >
+        <a href="#contact" class="nav-cta">
           Start a project <span>↗</span>
         </a>
 
@@ -985,9 +83,10 @@
 
   <main>
 
-    <!-- =========================
+    <!-- =====================================
          HERO
-    ========================== -->
+    ====================================== -->
+
     <section class="hero section-dark">
 
       <div class="container hero-grid">
@@ -1005,24 +104,18 @@
           </h1>
 
           <p class="hero-lede">
-            Vantera Creatives is a multidisciplinary creative studio building
-            brands, campaigns and multimedia experiences for ambitious
-            businesses.
+            Vantera Creatives is a multidisciplinary creative studio
+            building brands, campaigns and multimedia experiences
+            for ambitious businesses.
           </p>
 
           <div class="hero-actions">
 
-            <a
-              href="#work"
-              class="btn btn-primary"
-            >
+            <a href="#work" class="btn btn-primary">
               Explore our work <span>↓</span>
             </a>
 
-            <a
-              href="#contact"
-              class="text-link"
-            >
+            <a href="#contact" class="text-link">
               Start a project <span>↗</span>
             </a>
 
@@ -1040,14 +133,25 @@
 
             <div class="art-orange"></div>
 
-            <div class="art-word">V</div>
-
-            <div class="art-caption">
-              <span>VANTERA CREATIVES</span>
-              <span>BRANDING / DESIGN / MULTIMEDIA</span>
+            <div class="art-word">
+              V
             </div>
 
-            <div class="art-index">01</div>
+            <div class="art-caption">
+
+              <span>
+                VANTERA CREATIVES
+              </span>
+
+              <span>
+                BRANDING / DESIGN / MULTIMEDIA
+              </span>
+
+            </div>
+
+            <div class="art-index">
+              01
+            </div>
 
           </div>
 
@@ -1070,23 +174,39 @@
 
       <div class="hero-bottom container">
 
-        <div>Selected capabilities</div>
+        <div>
+          Selected capabilities
+        </div>
 
         <div class="capability-track">
 
-          <span>Brand Identity</span>
+          <span>
+            Brand Identity
+          </span>
+
           <b>✦</b>
 
-          <span>Graphic Design</span>
+          <span>
+            Graphic Design
+          </span>
+
           <b>✦</b>
 
-          <span>Photography</span>
+          <span>
+            Photography
+          </span>
+
           <b>✦</b>
 
-          <span>Videography</span>
+          <span>
+            Videography
+          </span>
+
           <b>✦</b>
 
-          <span>Motion</span>
+          <span>
+            Motion
+          </span>
 
         </div>
 
@@ -1095,9 +215,10 @@
     </section>
 
 
-    <!-- =========================
-         STUDIO INTRODUCTION
-    ========================== -->
+    <!-- =====================================
+         THE STUDIO
+    ====================================== -->
+
     <section class="statement section-light">
 
       <div class="container statement-grid">
@@ -1105,7 +226,6 @@
         <p class="section-kicker">
           01 / The studio
         </p>
-
 
         <div>
 
@@ -1115,10 +235,11 @@
           </h2>
 
           <p class="statement-copy">
-            Vantera Creatives is a multidisciplinary creative studio working
-            across multimedia production and visual communication. We bring
-            strategy, visual craft and storytelling together to help ambitious
-            businesses communicate with clarity, character and impact.
+            Vantera Creatives is a multidisciplinary creative studio
+            working across multimedia production and visual communication.
+            We bring strategy, visual craft and storytelling together to
+            help ambitious businesses communicate with clarity,
+            character and impact.
           </p>
 
           <p class="statement-capabilities">
@@ -1132,13 +253,11 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          SELECTED WORK
-    ========================== -->
-    <section
-      class="work section-light"
-      id="work"
-    >
+    ====================================== -->
+
+    <section class="work section-light" id="work">
 
       <div class="container">
 
@@ -1151,33 +270,34 @@
             </p>
 
             <h2>
-              Work that makes<br />
+              Work that makes
+              <br />
               <span>an impression.</span>
             </h2>
 
           </div>
 
-
           <p class="section-intro">
-            A curated selection of brand identities, campaigns, visual stories
-            and multimedia work created with purpose.
+            A selection of visual identities, campaigns,
+            photography and multimedia work created to solve
+            communication problems with creativity.
           </p>
 
         </div>
 
 
-        <!-- Portfolio filters -->
+        <!-- WORK FILTERS -->
+
         <div
-          class="filters"
+          class="work-filters reveal"
           role="tablist"
-          aria-label="Portfolio filters"
+          aria-label="Filter projects"
         >
 
           <button
             class="filter active"
-            type="button"
             data-filter="all"
-            role="tab"
+            type="button"
             aria-selected="true"
           >
             All
@@ -1185,9 +305,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="branding"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Branding
@@ -1195,9 +314,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="design"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Design
@@ -1205,9 +323,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="photography"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Photography
@@ -1215,9 +332,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="video"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Video
@@ -1225,9 +341,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="motion"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Motion
@@ -1235,9 +350,8 @@
 
           <button
             class="filter"
-            type="button"
             data-filter="campaigns"
-            role="tab"
+            type="button"
             aria-selected="false"
           >
             Campaigns
@@ -1246,39 +360,46 @@
         </div>
 
 
-        <!-- Portfolio grid -->
+        <!-- PROJECT GRID -->
+
         <div class="project-grid">
 
 
           <!-- PROJECT 01 -->
+
           <article
             class="project-card project-large reveal"
-            data-category="branding"
-            data-title="Vantera Creatives — Brand Identity"
-                           data-project="vantera-brand-identity"
-                           data-images="assets/projects/vantera-brand-identity/01.jpg,assets/projects/vantera-brand-identity/02.jpg,assets/projects/vantera-brand-identity/03.jpg"
-            data-type="Brand Identity"
-            data-description="A complete visual identity system built around confidence, creative energy and editorial restraint."
             tabindex="0"
             role="button"
-            aria-label="View Vantera Creatives brand identity project"
+            data-category="branding"
+            data-title="Vantera Creatives — Brand Identity"
+            data-type="Brand Identity"
+            data-description="A complete visual identity system developed for Vantera Creatives, including logo direction, typography, colour system and branded applications."
           >
 
-            <div class="project-visual project-vantera">
+            <div class="project-visual project-brand">
 
               <div class="pv-top">
-                VANTERA<br />
-                CREATIVES
+
+                <span>
+                  01
+                </span>
+
+                <span>
+                  BRAND IDENTITY
+                </span>
+
               </div>
 
-              <div class="pv-center">
-                V
+              <div class="pv-brand-name">
+                VANTERA
               </div>
 
-              <div class="pv-bottom">
-                <span>IDENTITY SYSTEM</span>
-                <span>2026</span>
+              <div class="pv-brand-sub">
+                CREATIVE STUDIO
               </div>
+
+              <div class="pv-orange-block"></div>
 
             </div>
 
@@ -1286,11 +407,20 @@
             <div class="project-meta">
 
               <div>
-                <span>Branding</span>
-                <h3>Vantera Creatives</h3>
+
+                <span class="project-index">
+                  01
+                </span>
+
+                <h3>
+                  Vantera Creatives
+                </h3>
+
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Brand Identity
+              </span>
 
             </div>
 
@@ -1298,34 +428,29 @@
 
 
           <!-- PROJECT 02 -->
+
           <article
             class="project-card reveal"
-            data-category="campaigns"
-            data-title="Restaurant Campaign — Concept"
-            data-type="Campaign Design"
-            data-description="A warm, high-impact campaign system for a contemporary Nairobi restaurant, designed for social, print and promotional use."
             tabindex="0"
             role="button"
-            aria-label="View restaurant campaign project"
+            data-category="campaigns"
+            data-title="Campaign Design"
+            data-type="Campaign Design"
+            data-description="A visual campaign direction created to communicate a clear commercial message through bold, structured and engaging digital content."
           >
 
-            <div class="project-visual project-food">
+            <div class="project-visual project-campaign">
 
-              <div class="food-circle">
-                SOKO<br />
-                <small>254</small>
+              <div class="campaign-title">
+                MOVE<br />
+                BUSINESS<br />
+                FORWARD.
               </div>
 
-              <div class="food-copy">
-                EAT<br />
-                LOCAL.<br />
-                LIVE<br />
-                FULL.
-              </div>
+              <div class="campaign-shape"></div>
 
-              <div class="pv-bottom">
-                <span>CAMPAIGN CONCEPT</span>
-                <span>01</span>
+              <div class="campaign-label">
+                CAMPAIGN / 2026
               </div>
 
             </div>
@@ -1334,11 +459,20 @@
             <div class="project-meta">
 
               <div>
-                <span>Campaigns</span>
-                <h3>Restaurant Campaign</h3>
+
+                <span class="project-index">
+                  02
+                </span>
+
+                <h3>
+                  Campaign Design
+                </h3>
+
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Campaigns
+              </span>
 
             </div>
 
@@ -1346,29 +480,32 @@
 
 
           <!-- PROJECT 03 -->
+
           <article
             class="project-card reveal"
-            data-category="design"
-            data-title="Real Estate — Visual Marketing"
-            data-type="Visual Marketing"
-            data-description="A property marketing direction combining clean listing layouts, premium typography and social-first content."
             tabindex="0"
             role="button"
-            aria-label="View real estate visual marketing project"
+            data-category="design"
+            data-title="Editorial Design"
+            data-type="Graphic Design"
+            data-description="A collection of editorial and digital design work developed around strong typography, composition and clear visual hierarchy."
           >
 
-            <div class="project-visual project-realestate">
+            <div class="project-visual project-editorial">
 
-              <div class="re-label">
-                PROPERTY<br />
-                <strong>01</strong>
+              <div class="editorial-number">
+                03
               </div>
 
-              <div class="re-house"></div>
+              <div class="editorial-title">
+                VISUAL<br />
+                STORIES
+              </div>
 
-              <div class="re-info">
-                <span>MODERN LIVING</span>
-                <b>NAIROBI</b>
+              <div class="editorial-line"></div>
+
+              <div class="editorial-small">
+                DESIGN / EDITORIAL / DIGITAL
               </div>
 
             </div>
@@ -1377,11 +514,20 @@
             <div class="project-meta">
 
               <div>
-                <span>Design</span>
-                <h3>Real Estate Visuals</h3>
+
+                <span class="project-index">
+                  03
+                </span>
+
+                <h3>
+                  Editorial Design
+                </h3>
+
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Graphic Design
+              </span>
 
             </div>
 
@@ -1389,33 +535,34 @@
 
 
           <!-- PROJECT 04 -->
+
           <article
             class="project-card project-wide reveal"
-            data-category="video"
-            data-title="Editorial Stories — Multimedia"
-                           data-project="editorial-stories"
-                           data-images="assets/projects/editorial-stories/01.jpg,assets/projects/editorial-stories/02.jpg,assets/projects/editorial-stories/03.jpg"
-            data-type="Video & Editorial"
-            data-description="Editorial storytelling through interviews, photography, video and social-first visual packaging."
             tabindex="0"
             role="button"
-            aria-label="View editorial stories project"
+            data-category="photography"
+            data-title="Visual Storytelling"
+            data-type="Photography"
+            data-description="A visual storytelling project focused on authentic moments, people and environments through carefully composed photography."
           >
 
-            <div class="project-visual project-editorial">
+            <div class="project-visual project-photo">
 
-              <div class="editorial-big">
-                STORIES<br />
-                <em>MATTER.</em>
+              <div class="photo-overlay"></div>
+
+              <div class="photo-copy">
+
+                <span>
+                  04 / PHOTOGRAPHY
+                </span>
+
+                <strong>
+                  PEOPLE.<br />
+                  PLACES.<br />
+                  STORIES.
+                </strong>
+
               </div>
-
-              <div class="editorial-side">
-                PHOTO / VIDEO<br />
-                JOURNALISM<br />
-                STORYTELLING
-              </div>
-
-              <div class="editorial-line"></div>
 
             </div>
 
@@ -1423,11 +570,20 @@
             <div class="project-meta">
 
               <div>
-                <span>Video</span>
-                <h3>Editorial Stories</h3>
+
+                <span class="project-index">
+                  04
+                </span>
+
+                <h3>
+                  Visual Storytelling
+                </h3>
+
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Photography
+              </span>
 
             </div>
 
@@ -1435,33 +591,34 @@
 
 
           <!-- PROJECT 05 -->
+
           <article
             class="project-card reveal"
-            data-category="photography"
-            data-title="Visual Portraits — Photography"
-            data-type="Photography"
-            data-description="Portrait-led visual storytelling exploring personality, environment and authentic human moments."
             tabindex="0"
             role="button"
-            aria-label="View visual portraits project"
+            data-category="video"
+            data-title="Brand Stories"
+            data-type="Video Production"
+            data-description="Short-form video storytelling combining concept development, production, editing and visual direction for digital audiences."
           >
 
-            <div class="project-visual project-food">
+            <div class="project-visual project-video">
 
-              <div class="food-circle">
-                VISUAL<br />
-                <small>01</small>
+              <div class="video-play">
+                ▶
               </div>
 
-              <div class="food-copy">
-                PEOPLE.<br />
-                PLACES.<br />
-                STORIES.
+              <div class="video-label">
+                VIDEO / STORYTELLING
               </div>
 
-              <div class="pv-bottom">
-                <span>PHOTOGRAPHY</span>
-                <span>01</span>
+              <div class="video-bars">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
               </div>
 
             </div>
@@ -1470,11 +627,20 @@
             <div class="project-meta">
 
               <div>
-                <span>Photography</span>
-                <h3>Visual Portraits</h3>
+
+                <span class="project-index">
+                  05
+                </span>
+
+                <h3>
+                  Brand Stories
+                </h3>
+
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Video
+              </span>
 
             </div>
 
@@ -1482,31 +648,27 @@
 
 
           <!-- PROJECT 06 -->
+
           <article
             class="project-card reveal"
-            data-category="motion"
-            data-title="Motion Stories — Visual Direction"
-                           data-project="motion-stories"
-                           data-images="assets/projects/motion-stories/01.jpg,assets/projects/motion-stories/02.jpg,assets/projects/motion-stories/03.jpg"
-            data-type="Motion Graphics"
-            data-description="Motion-led visual communication combining typography, composition and movement for digital platforms."
             tabindex="0"
             role="button"
-            aria-label="View motion stories project"
+            data-category="motion"
+            data-title="Motion Stories"
+            data-type="Motion Graphics"
+            data-description="Animated visual communication designed to add movement, rhythm and attention to digital campaigns and brand content."
           >
 
-            <div class="project-visual project-realestate">
+            <div class="project-visual project-motion">
 
-              <div class="re-label">
-                MOTION<br />
-                <strong>01</strong>
+              <div class="motion-word">
+                MOTION
               </div>
 
-              <div class="re-house"></div>
+              <div class="motion-circle"></div>
 
-              <div class="re-info">
-                <span>MOVING IDEAS</span>
-                <b>VANTERA</b>
+              <div class="motion-label">
+                06 / MOTION STORIES
               </div>
 
             </div>
@@ -1515,15 +677,25 @@
             <div class="project-meta">
 
               <div>
-                <span>Motion</span>
-                <h3>Motion Stories</h3>
+
+                <span class="project-index">
+                  06
+                </span>
+
+                <h3>
+                  Motion Stories
+                </h3>
+
               </div>
 
-              <span class="arrow">↗</span>
+              <span class="project-type">
+                Motion Graphics
+              </span>
 
             </div>
 
           </article>
+
 
         </div>
 
@@ -1534,11 +706,8 @@
             More projects coming soon.
           </span>
 
-          <a
-            href="#contact"
-            class="text-link dark-link"
-          >
-            Start a project <span>↗</span>
+          <a href="#contact" class="text-link">
+            Work with Vantera <span>↗</span>
           </a>
 
         </div>
@@ -1548,260 +717,839 @@
     </section>
 
 
-    <!-- =========================
-         SERVICES
-    ========================== -->
+    <!-- =====================================
+         WHAT WE DO
+         INTERACTIVE SERVICE INDEX
+    ====================================== -->
+
     <section
-      class="services section-dark services-redesign"
+      class="services section-dark"
       id="services"
     >
+
       <div class="container">
 
-        <div class="services-stage">
 
-          <div class="services-copy">
-            <div class="services-heading reveal">
-              <p class="section-kicker">03 / What we do</p>
-              <h2>Creative services<br /><span>with purpose.</span></h2>
-              <p class="services-intro">A focused set of creative capabilities for brands that want to show up with clarity and character.</p>
-            </div>
+        <!-- SECTION INTRO -->
 
-            <div class="service-list service-accordion service-list-compact">
+        <div class="section-head services-head reveal">
 
-              <div class="service-item service-accordion-item reveal" tabindex="0" role="button" aria-expanded="false" aria-controls="service-panel-01" data-feature-image="assets/projects/vantera-brand-identity/01.jpg" data-feature-title="Brand Identity" data-feature-label="Identity systems / Visual language">
-                <div class="service-no">01</div>
-                <div class="service-heading">
-                  <div class="service-title-row"><h3>Brand Identity</h3><span class="service-icon" aria-hidden="true">+</span></div>
-                  <p>Distinctive identities, guidelines and brand assets.</p>
-                  <div class="service-details" id="service-panel-01" hidden>
-                    <div class="service-project-list">
-                      <article class="service-project" data-title="Vantera Creatives — Brand Identity" data-project="vantera-brand-identity" data-images="assets/projects/vantera-brand-identity/01.jpg,assets/projects/vantera-brand-identity/02.jpg,assets/projects/vantera-brand-identity/03.jpg" data-type="Brand Identity" data-description="A complete visual identity system for Vantera Creatives, built around confidence, creative energy and editorial restraint.">
-                        <strong>Vantera Brand Identity</strong><b>OPEN ↗</b>
-                      </article>
-                      <article class="service-project" data-title="Brand Guidelines — Visual System" data-project="visual-identity-system" data-images="assets/projects/visual-identity-system/01.jpg,assets/projects/visual-identity-system/02.jpg,assets/projects/visual-identity-system/03.jpg" data-type="Brand Identity" data-description="A structured visual language defining logo use, colour, typography, layout and brand applications for consistent communication.">
-                        <strong>Visual Identity System</strong><b>OPEN ↗</b>
-                      </article>
-                      <article class="service-project" data-title="Packaging & Brand Applications" data-project="brand-applications" data-images="assets/projects/brand-applications/01.jpg,assets/projects/brand-applications/02.jpg,assets/projects/brand-applications/03.jpg" data-type="Brand Identity" data-description="Selected brand touchpoints showing how the identity translates into packaging, stationery, merchandise and real-world applications.">
-                        <strong>Brand Applications</strong><b>OPEN ↗</b>
-                      </article>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div>
 
-              <div class="service-item service-accordion-item reveal" tabindex="0" role="button" aria-expanded="false" aria-controls="service-panel-02" data-feature-image="assets/projects/not-just-a-design/01.jpg" data-feature-title="Graphic Design" data-feature-label="Campaigns / Editorial / Digital">
-                <div class="service-no">02</div>
-                <div class="service-heading">
-                  <div class="service-title-row"><h3>Graphic Design</h3><span class="service-icon" aria-hidden="true">+</span></div>
-                  <p>Campaigns, social content, editorial and marketing collateral.</p>
-                  <div class="service-details" id="service-panel-02" hidden>
-                    <div class="service-project-list">
-                      <article class="service-project" data-title="Not Just a Design — Vantera Campaign" data-project="not-just-a-design" data-images="assets/projects/not-just-a-design/01.jpg,assets/projects/not-just-a-design/02.jpg,assets/projects/not-just-a-design/03.jpg" data-type="Campaign Design" data-description="A visual campaign built around the idea that effective design is more than decoration: it is a strategic visual statement."><strong>Not Just a Design</strong><b>OPEN ↗</b></article>
-                      <article class="service-project" data-title="Real Estate Visual Marketing" data-project="real-estate-visuals" data-images="assets/projects/real-estate-visuals/01.jpg,assets/projects/real-estate-visuals/02.jpg,assets/projects/real-estate-visuals/03.jpg" data-type="Graphic Design" data-description="Premium property marketing visuals combining strong typography, hierarchy, image treatment and social-first layouts."><strong>Real Estate Visuals</strong><b>OPEN ↗</b></article>
-                      <article class="service-project" data-title="Editorial & Publication Design" data-project="editorial-design" data-images="assets/projects/editorial-design/01.jpg,assets/projects/editorial-design/02.jpg,assets/projects/editorial-design/03.jpg" data-type="Editorial Design" data-description="Multi-page editorial layouts designed for clarity, hierarchy, visual rhythm and professional presentation across print and digital formats."><strong>Editorial Design</strong><b>OPEN ↗</b></article>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <p class="section-kicker light">
+              03 / What we do
+            </p>
 
-              <div class="service-item service-accordion-item reveal" tabindex="0" role="button" aria-expanded="false" aria-controls="service-panel-03" data-feature-image="assets/projects/brand-portraits/01.jpg" data-feature-title="Photography" data-feature-label="Portraits / Brand / Editorial">
-                <div class="service-no">03</div>
-                <div class="service-heading">
-                  <div class="service-title-row"><h3>Photography</h3><span class="service-icon" aria-hidden="true">+</span></div>
-                  <p>Portraits, products, property, events and visual stories.</p>
-                  <div class="service-details" id="service-panel-03" hidden>
-                    <div class="service-project-list">
-                      <article class="service-project" data-title="Brand & Portrait Photography" data-project="brand-portraits" data-images="assets/projects/brand-portraits/01.jpg,assets/projects/brand-portraits/02.jpg,assets/projects/brand-portraits/03.jpg" data-type="Photography" data-description="Portrait-led photography designed to humanise brands and communicate personality, confidence and credibility."><strong>Brand Portraits</strong><b>OPEN ↗</b></article>
-                      <article class="service-project" data-title="Commercial Photography" data-project="commercial-photography" data-images="assets/projects/commercial-photography/01.jpg,assets/projects/commercial-photography/02.jpg,assets/projects/commercial-photography/03.jpg" data-type="Photography" data-description="Commercial imagery for products, spaces and campaigns with a polished editorial finish."><strong>Commercial Photography</strong><b>OPEN ↗</b></article>
-                      <article class="service-project" data-title="Visual Stories" data-project="visual-stories" data-images="assets/projects/visual-stories/01.jpg,assets/projects/visual-stories/02.jpg,assets/projects/visual-stories/03.jpg" data-type="Photography" data-description="Documentary-inspired visual stories built around people, places and meaningful moments."><strong>Visual Stories</strong><b>OPEN ↗</b></article>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <h2>
+              Creative services
+              <br />
+              <span>built around your goals.</span>
+            </h2>
 
-              <div class="service-item service-accordion-item reveal" tabindex="0" role="button" aria-expanded="false" aria-controls="service-panel-04" data-feature-image="assets/projects/editorial-stories/01.jpg" data-feature-title="Video Production" data-feature-label="Interviews / Social / Editorial">
-                <div class="service-no">04</div>
-                <div class="service-heading">
-                  <div class="service-title-row"><h3>Video Production</h3><span class="service-icon" aria-hidden="true">+</span></div>
-                  <p>Interviews, reels, promotions, events and editorial video.</p>
-                  <div class="service-details" id="service-panel-04" hidden>
-                    <div class="service-project-list">
-                      <article class="service-project" data-title="Editorial Stories — Multimedia" data-project="editorial-stories" data-images="assets/projects/editorial-stories/01.jpg,assets/projects/editorial-stories/02.jpg,assets/projects/editorial-stories/03.jpg" data-type="Video & Editorial" data-description="Editorial storytelling through interviews, photography, video and social-first visual packaging."><strong>Editorial Stories</strong><b>OPEN ↗</b></article>
-                      <article class="service-project" data-title="Promotional Video" data-project="promotional-video" data-images="assets/projects/promotional-video/01.jpg,assets/projects/promotional-video/02.jpg,assets/projects/promotional-video/03.jpg" data-type="Video Production" data-description="Short-form and campaign-led video designed to communicate value quickly and clearly."><strong>Promotional Video</strong><b>OPEN ↗</b></article>
-                      <article class="service-project" data-title="Event & Social Video" data-project="event-social-video" data-images="assets/projects/event-social-video/01.jpg,assets/projects/event-social-video/02.jpg,assets/projects/event-social-video/03.jpg" data-type="Video Production" data-description="Social-first coverage and event storytelling built for digital platforms."><strong>Event & Social Video</strong><b>OPEN ↗</b></article>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="service-item service-accordion-item reveal" tabindex="0" role="button" aria-expanded="false" aria-controls="service-panel-05" data-feature-image="assets/projects/motion-stories/01.jpg" data-feature-title="Motion Graphics" data-feature-label="Type / Explainers / Brand Motion">
-                <div class="service-no">05</div>
-                <div class="service-heading">
-                  <div class="service-title-row"><h3>Motion Graphics</h3><span class="service-icon" aria-hidden="true">+</span></div>
-                  <p>Animated type, explainers and branded motion systems.</p>
-                  <div class="service-details" id="service-panel-05" hidden>
-                    <div class="service-project-list">
-                      <article class="service-project" data-title="Motion Stories — Visual Direction" data-project="motion-stories" data-images="assets/projects/motion-stories/01.jpg,assets/projects/motion-stories/02.jpg,assets/projects/motion-stories/03.jpg" data-type="Motion Graphics" data-description="Motion-led visual communication combining typography, composition and movement for digital platforms."><strong>Motion Stories</strong><b>OPEN ↗</b></article>
-                      <article class="service-project" data-title="Animated Brand Systems" data-project="animated-brand-systems" data-images="assets/projects/animated-brand-systems/01.jpg,assets/projects/animated-brand-systems/02.jpg,assets/projects/animated-brand-systems/03.jpg" data-type="Motion Graphics" data-description="Animated brand elements that bring identity systems to life across digital touchpoints."><strong>Animated Brand Systems</strong><b>OPEN ↗</b></article>
-                      <article class="service-project" data-title="Social Motion" data-project="social-motion" data-images="assets/projects/social-motion/01.jpg,assets/projects/social-motion/02.jpg,assets/projects/social-motion/03.jpg" data-type="Motion Graphics" data-description="Short motion assets built for social campaigns and digital storytelling."><strong>Social Motion</strong><b>OPEN ↗</b></article>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="service-item service-accordion-item reveal" tabindex="0" role="button" aria-expanded="false" aria-controls="service-panel-06" data-feature-image="assets/projects/creative-direction/01.jpg" data-feature-title="Content & Campaigns" data-feature-label="Concept / Direction / Rollout">
-                <div class="service-no">06</div>
-                <div class="service-heading">
-                  <div class="service-title-row"><h3>Content & Campaigns</h3><span class="service-icon" aria-hidden="true">+</span></div>
-                  <p>Integrated visual campaigns from idea to rollout.</p>
-                  <div class="service-details" id="service-panel-06" hidden>
-                    <div class="service-project-list">
-                      <article class="service-project" data-title="Integrated Campaigns" data-project="integrated-campaigns" data-images="assets/projects/integrated-campaigns/01.jpg,assets/projects/integrated-campaigns/02.jpg,assets/projects/integrated-campaigns/03.jpg" data-type="Campaigns" data-description="Integrated campaigns connecting strategy, design, photography, video and social content around one idea."><strong>Integrated Campaigns</strong><b>OPEN ↗</b></article>
-                      <article class="service-project" data-title="Content Systems" data-project="content-systems" data-images="assets/projects/content-systems/01.jpg,assets/projects/content-systems/02.jpg,assets/projects/content-systems/03.jpg" data-type="Content Systems" data-description="Repeatable visual content systems that keep campaigns consistent across channels."><strong>Content Systems</strong><b>OPEN ↗</b></article>
-                      <article class="service-project" data-title="Creative Direction" data-project="creative-direction" data-images="assets/projects/creative-direction/01.jpg,assets/projects/creative-direction/02.jpg,assets/projects/creative-direction/03.jpg" data-type="Creative Direction" data-description="Concept development and visual direction that align messaging, design and production around one clear creative idea."><strong>Creative Direction</strong><b>OPEN ↗</b></article>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="service-callout reveal">
-              <span>Need ongoing creative support?</span>
-              <a href="#contact">Ask about monthly retainers <b>↗</b></a>
-            </div>
           </div>
 
-          <aside class="services-visual reveal delay-1" aria-label="Selected service image">
-            <div class="services-visual-frame">
-              <div class="services-visual-media">
-                <img id="serviceFeatureImage" src="assets/projects/vantera-brand-identity/01.jpg" alt="Vantera Brand Identity project preview" />
-                <div class="services-visual-fallback" id="serviceFeatureFallback" hidden>
-                  <span>UPLOAD PROJECT IMAGE</span>
-                  <strong id="serviceFeatureFallbackTitle">Vantera Brand Identity</strong>
-                </div>
-              </div>
-              <div class="services-visual-meta">
-                <div>
-                  <span id="serviceFeatureLabel">Identity systems / Visual language</span>
-                  <h3 id="serviceFeatureTitle">Brand Identity</h3>
-                </div>
-                <span class="services-visual-index" id="serviceFeatureIndex">01</span>
-              </div>
-            </div>
-            <p class="services-visual-note">Selected work appears here. Click a service to switch the visual focus.</p>
-          </aside>
+          <p class="section-intro light">
+            Select a service to explore the kind of creative
+            work Vantera can build for your brand.
+          </p>
 
         </div>
+
+
+        <!-- SERVICE EXPERIENCE -->
+
+        <div class="services-experience">
+
+
+          <!-- =================================
+               LEFT VISUAL
+          ================================== -->
+
+          <div class="services-visual">
+
+            <div class="service-image-frame">
+
+              <!-- Brand Identity Image -->
+
+              <div
+                class="service-image service-image-brand active"
+                data-service-image="branding"
+              >
+
+                <div class="service-image-number">
+                  01
+                </div>
+
+                <div class="service-image-word">
+                  V
+                </div>
+
+                <div class="service-image-label">
+                  VAN​TERA<br />
+                  BRAND IDENTITY
+                </div>
+
+              </div>
+
+
+              <!-- Graphic Design Image -->
+
+              <div
+                class="service-image service-image-design"
+                data-service-image="design"
+              >
+
+                <div class="service-image-number">
+                  02
+                </div>
+
+                <div class="service-image-word">
+                  GD
+                </div>
+
+                <div class="service-image-label">
+                  GRAPHIC<br />
+                  DESIGN
+                </div>
+
+              </div>
+
+
+              <!-- Photography Image -->
+
+              <div
+                class="service-image service-image-photography"
+                data-service-image="photography"
+              >
+
+                <div class="service-image-number">
+                  03
+                </div>
+
+                <div class="service-image-word">
+                  PH
+                </div>
+
+                <div class="service-image-label">
+                  VISUAL<br />
+                  STORIES
+                </div>
+
+              </div>
+
+
+              <!-- Video Image -->
+
+              <div
+                class="service-image service-image-video"
+                data-service-image="video"
+              >
+
+                <div class="service-image-number">
+                  04
+                </div>
+
+                <div class="service-image-word">
+                  ▶
+                </div>
+
+                <div class="service-image-label">
+                  VIDEO<br />
+                  PRODUCTION
+                </div>
+
+              </div>
+
+
+              <!-- Motion Image -->
+
+              <div
+                class="service-image service-image-motion"
+                data-service-image="motion"
+              >
+
+                <div class="service-image-number">
+                  05
+                </div>
+
+                <div class="service-image-word">
+                  M
+                </div>
+
+                <div class="service-image-label">
+                  MOTION<br />
+                  GRAPHICS
+                </div>
+
+              </div>
+
+
+              <!-- Campaign Image -->
+
+              <div
+                class="service-image service-image-campaigns"
+                data-service-image="campaigns"
+              >
+
+                <div class="service-image-number">
+                  06
+                </div>
+
+                <div class="service-image-word">
+                  C
+                </div>
+
+                <div class="service-image-label">
+                  CONTENT<br />
+                  CAMPAIGNS
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="services-visual-caption">
+
+              <span>
+                Vantera Creatives
+              </span>
+
+              <span>
+                Nairobi · Kenya
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- =================================
+               RIGHT SERVICE LIST
+          ================================== -->
+
+          <div class="services-list">
+
+
+            <!-- SERVICE 01 -->
+
+            <article
+              class="service-item active reveal"
+              data-service="branding"
+            >
+
+              <button
+                class="service-trigger"
+                type="button"
+                aria-expanded="true"
+              >
+
+                <span class="service-number">
+                  01
+                </span>
+
+                <span class="service-title">
+                  Brand Identity
+                </span>
+
+                <span class="service-plus">
+                  −
+                </span>
+
+              </button>
+
+
+              <div class="service-panel">
+
+                <p class="service-description">
+                  We build distinctive visual identities that give
+                  businesses clarity, character and a recognizable presence.
+                </p>
+
+
+                <div class="service-project">
+
+                  <div class="service-project-info">
+
+                    <span class="service-project-label">
+                      Selected project
+                    </span>
+
+                    <h3>
+                      Vantera Creatives
+                    </h3>
+
+                    <p>
+                      Brand Identity
+                    </p>
+
+                  </div>
+
+
+                  <a
+                    href="#work"
+                    class="service-project-link"
+                    data-service-filter="branding"
+                  >
+                    View project <span>↗</span>
+                  </a>
+
+                </div>
+
+
+                <div class="service-tags">
+
+                  <span>
+                    Logo Design
+                  </span>
+
+                  <span>
+                    Visual Identity
+                  </span>
+
+                  <span>
+                    Typography
+                  </span>
+
+                  <span>
+                    Brand Guidelines
+                  </span>
+
+                  <span>
+                    Art Direction
+                  </span>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- SERVICE 02 -->
+
+            <article
+              class="service-item reveal"
+              data-service="design"
+            >
+
+              <button
+                class="service-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span class="service-number">
+                  02
+                </span>
+
+                <span class="service-title">
+                  Graphic Design
+                </span>
+
+                <span class="service-plus">
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="service-panel">
+
+                <p class="service-description">
+                  We create purposeful visual communication for campaigns,
+                  social media, publications, marketing and everyday brand needs.
+                </p>
+
+
+                <div class="service-project">
+
+                  <div class="service-project-info">
+
+                    <span class="service-project-label">
+                      Selected project
+                    </span>
+
+                    <h3>
+                      Editorial Design
+                    </h3>
+
+                    <p>
+                      Graphic Design
+                    </p>
+
+                  </div>
+
+
+                  <a
+                    href="#work"
+                    class="service-project-link"
+                    data-service-filter="design"
+                  >
+                    View project <span>↗</span>
+                  </a>
+
+                </div>
+
+
+                <div class="service-tags">
+
+                  <span>
+                    Campaign Design
+                  </span>
+
+                  <span>
+                    Social Media
+                  </span>
+
+                  <span>
+                    Editorial
+                  </span>
+
+                  <span>
+                    Print
+                  </span>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- SERVICE 03 -->
+
+            <article
+              class="service-item reveal"
+              data-service="photography"
+            >
+
+              <button
+                class="service-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span class="service-number">
+                  03
+                </span>
+
+                <span class="service-title">
+                  Photography
+                </span>
+
+                <span class="service-plus">
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="service-panel">
+
+                <p class="service-description">
+                  We create intentional imagery for brands, people,
+                  products and campaigns — balancing technical quality
+                  with visual storytelling.
+                </p>
+
+
+                <div class="service-project">
+
+                  <div class="service-project-info">
+
+                    <span class="service-project-label">
+                      Selected project
+                    </span>
+
+                    <h3>
+                      Visual Storytelling
+                    </h3>
+
+                    <p>
+                      Photography
+                    </p>
+
+                  </div>
+
+
+                  <a
+                    href="#work"
+                    class="service-project-link"
+                    data-service-filter="photography"
+                  >
+                    View project <span>↗</span>
+                  </a>
+
+                </div>
+
+
+                <div class="service-tags">
+
+                  <span>
+                    Brand Photography
+                  </span>
+
+                  <span>
+                    Portraits
+                  </span>
+
+                  <span>
+                    Products
+                  </span>
+
+                  <span>
+                    Editorial
+                  </span>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- SERVICE 04 -->
+
+            <article
+              class="service-item reveal"
+              data-service="video"
+            >
+
+              <button
+                class="service-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span class="service-number">
+                  04
+                </span>
+
+                <span class="service-title">
+                  Video Production
+                </span>
+
+                <span class="service-plus">
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="service-panel">
+
+                <p class="service-description">
+                  From concept and scripting to filming and post-production,
+                  we produce videos designed to tell stories and move audiences.
+                </p>
+
+
+                <div class="service-project">
+
+                  <div class="service-project-info">
+
+                    <span class="service-project-label">
+                      Selected project
+                    </span>
+
+                    <h3>
+                      Brand Stories
+                    </h3>
+
+                    <p>
+                      Video Production
+                    </p>
+
+                  </div>
+
+
+                  <a
+                    href="#work"
+                    class="service-project-link"
+                    data-service-filter="video"
+                  >
+                    View project <span>↗</span>
+                  </a>
+
+                </div>
+
+
+                <div class="service-tags">
+
+                  <span>
+                    Brand Films
+                  </span>
+
+                  <span>
+                    Social Video
+                  </span>
+
+                  <span>
+                    Interviews
+                  </span>
+
+                  <span>
+                    Documentary
+                  </span>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- SERVICE 05 -->
+
+            <article
+              class="service-item reveal"
+              data-service="motion"
+            >
+
+              <button
+                class="service-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span class="service-number">
+                  05
+                </span>
+
+                <span class="service-title">
+                  Motion Graphics
+                </span>
+
+                <span class="service-plus">
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="service-panel">
+
+                <p class="service-description">
+                  We bring visual identities, campaigns and digital content
+                  to life through purposeful animation and motion design.
+                </p>
+
+
+                <div class="service-project">
+
+                  <div class="service-project-info">
+
+                    <span class="service-project-label">
+                      Selected project
+                    </span>
+
+                    <h3>
+                      Motion Stories
+                    </h3>
+
+                    <p>
+                      Motion Graphics
+                    </p>
+
+                  </div>
+
+
+                  <a
+                    href="#work"
+                    class="service-project-link"
+                    data-service-filter="motion"
+                  >
+                    View project <span>↗</span>
+                  </a>
+
+                </div>
+
+
+                <div class="service-tags">
+
+                  <span>
+                    2D Animation
+                  </span>
+
+                  <span>
+                    Logo Animation
+                  </span>
+
+                  <span>
+                    Social Motion
+                  </span>
+
+                  <span>
+                    Visual Effects
+                  </span>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- SERVICE 06 -->
+
+            <article
+              class="service-item reveal"
+              data-service="campaigns"
+            >
+
+              <button
+                class="service-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span class="service-number">
+                  06
+                </span>
+
+                <span class="service-title">
+                  Content &amp; Campaigns
+                </span>
+
+                <span class="service-plus">
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="service-panel">
+
+                <p class="service-description">
+                  We bring design, photography, video and storytelling
+                  together to create cohesive campaigns built around
+                  a clear creative idea.
+                </p>
+
+
+                <div class="service-project">
+
+                  <div class="service-project-info">
+
+                    <span class="service-project-label">
+                      Selected project
+                    </span>
+
+                    <h3>
+                      Campaign Design
+                    </h3>
+
+                    <p>
+                      Content &amp; Campaigns
+                    </p>
+
+                  </div>
+
+
+                  <a
+                    href="#work"
+                    class="service-project-link"
+                    data-service-filter="campaigns"
+                  >
+                    View project <span>↗</span>
+                  </a>
+
+                </div>
+
+
+                <div class="service-tags">
+
+                  <span>
+                    Creative Campaigns
+                  </span>
+
+                  <span>
+                    Content Strategy
+                  </span>
+
+                  <span>
+                    Social Content
+                  </span>
+
+                  <span>
+                    Art Direction
+                  </span>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          ABOUT
-    ========================== -->
-    <section
-      class="about section-light"
-      id="about"
-    >
+    ====================================== -->
+
+    <section class="about section-light" id="about">
 
       <div class="container about-grid">
 
-
-        <div class="about-photo reveal">
-
-          <div class="portrait-placeholder">
-
-            <span>JA</span>
-
-            <small>
-              JOHN AYODI
-            </small>
-
-          </div>
-
-          <div class="photo-label">
-            MULTIMEDIA DESIGNER<br />
-            VISUAL STORYTELLER
-          </div>
-
-        </div>
-
-
-        <div class="about-copy reveal delay-1">
+        <div class="about-label reveal">
 
           <p class="section-kicker">
             04 / About
           </p>
 
+        </div>
+
+
+        <div class="about-content reveal">
+
           <h2>
-            Design is not decoration.<br />
-            <span>It's communication.</span>
+            Vantera is a creative studio
+            built around
+            <span>
+              ideas, craft and impact.
+            </span>
           </h2>
 
+          <p>
+            We work with businesses, organizations and ambitious
+            individuals to transform ideas into compelling visual
+            experiences.
+          </p>
 
           <p>
-            I'm John Ayodi, the creative lead behind Vantera Creatives.
-            I'm a multimedia designer and visual storyteller based in Nairobi,
-            working across graphic design, branding, photography, video,
-            motion and journalism.
+            Our work sits at the intersection of design, storytelling
+            and multimedia production — giving brands the tools they
+            need to communicate with confidence in a crowded digital world.
           </p>
 
 
-          <p>
-            I care about the thinking behind the visual: the audience, the
-            message, the emotion and the action a piece of communication
-            should create.
-          </p>
+          <div class="about-founder">
 
-
-          <div class="skill-cloud">
-
-            <span>Adobe Photoshop</span>
-            <span>Illustrator</span>
-            <span>InDesign</span>
-            <span>Premiere Pro</span>
-            <span>After Effects</span>
-            <span>DaVinci Resolve</span>
-            <span>Photography</span>
-            <span>Videography</span>
-            <span>Editorial</span>
-
-          </div>
-
-
-          <div class="about-cta-row">
-            <a
-              href="#contact"
-              class="text-link dark-link"
-              data-vc-editable="true"
-            >
-              Work with Vantera <span>↗</span>
-            </a>
-
-            <button
-              type="button"
-              class="about-john-btn"
-              id="aboutJohnOpen"
-              aria-haspopup="dialog"
-              aria-controls="aboutJohnModal"
-              aria-label="Read more about John Ayodi"
-              data-vc-editable="true"
-            >
-              About John <span>↗</span>
-            </button>
-
-            <div class="about-socials-inline" aria-label="John Ayodi social links">
-              <a class="about-social-icon" href="https://www.linkedin.com/in/john-ayodi-0304253a9/" target="_blank" rel="noopener noreferrer" aria-label="Open John Ayodi LinkedIn" title="LinkedIn">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.16 3.5A2.66 2.66 0 1 1 5.16 8.82 2.66 2.66 0 0 1 5.16 3.5ZM2.82 9.8h4.68V21H2.82V9.8Zm7.6 0h4.49v1.53h.06c.62-1.14 2.15-2.34 4.42-2.34 4.72 0 5.6 3.1 5.6 7.13V21h-4.68v-4.31c0-1.03-.02-2.35-1.43-2.35-1.43 0-1.65 1.12-1.65 2.28V21h-4.67V9.8Z"/></svg>
-              </a>
-              <a class="about-social-icon" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Open John's YouTube" title="YouTube">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.53 3.55 12 3.55 12 3.55s-7.53 0-9.39.53A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12c1.86.53 9.39.53 9.39.53s7.53 0 9.39-.53a3 3 0 0 0 2.11-2.12A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8ZM9.55 15.97V8.03L16.2 12l-6.65 3.97Z"/></svg>
-              </a>
-              <a class="about-social-icon whatsapp" href="https://wa.me/254794541302?text=Hello%20John%2C%20I%20visited%20the%20Vantera%20Creatives%20website%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Contact John Ayodi on WhatsApp" title="WhatsApp">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.76 11.76 0 0 0 12.08 0C5.56 0 .26 5.3.26 11.82c0 2.08.54 4.11 1.57 5.89L.2 24l6.46-1.69a11.8 11.8 0 0 0 5.42 1.3h.01c6.52 0 11.82-5.3 11.82-11.82a11.76 11.76 0 0 0-3.39-8.31ZM12.09 21.62h-.01a9.79 9.79 0 0 1-4.99-1.36l-.36-.21-3.83 1 1.02-3.74-.23-.38a9.79 9.79 0 1 1 8.4 4.69Zm5.37-7.33c-.29-.15-1.69-.84-1.95-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.9 1.13-.16.19-.33.22-.61.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.43s1.02 2.82 1.16 3.01c.14.19 2 3.05 4.84 4.27.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.69-.69 1.93-1.35.24-.66.24-1.23.17-1.35-.07-.12-.26-.19-.55-.34Z"/></svg>
-              </a>
+            <div class="founder-mark">
+              JA
             </div>
+
+            <div>
+
+              <strong>
+                John Ayodi
+              </strong>
+
+              <span>
+                Founder &amp; Creative Lead
+              </span>
+
+            </div>
+
           </div>
 
         </div>
@@ -1811,11 +1559,12 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          PROCESS
-    ========================== -->
+    ====================================== -->
+
     <section
-      class="process section-light"
+      class="process section-dark"
       id="process"
     >
 
@@ -1825,16 +1574,24 @@
 
           <div>
 
-            <p class="section-kicker">
+            <p class="section-kicker light">
               05 / Process
             </p>
 
             <h2>
-              A simple process.<br />
-              <span>Serious thinking.</span>
+              From idea
+              <br />
+              <span>
+                to execution.
+              </span>
             </h2>
 
           </div>
+
+          <p class="section-intro light">
+            Good creative work starts with understanding the problem.
+            Our process keeps strategy, creativity and execution connected.
+          </p>
 
         </div>
 
@@ -1842,60 +1599,77 @@
         <div class="process-grid">
 
 
-          <div class="process-card reveal">
+          <article class="process-step reveal">
 
-            <span>01</span>
+            <span>
+              01
+            </span>
 
-            <h3>Discover</h3>
-
-            <p>
-              We understand your business, audience, goals and the problem
-              we're solving.
-            </p>
-
-          </div>
-
-
-          <div class="process-card reveal">
-
-            <span>02</span>
-
-            <h3>Define</h3>
+            <h3>
+              Discover
+            </h3>
 
             <p>
-              We establish the creative direction, message, visual language
-              and deliverables.
+              We understand your business, audience, objectives
+              and the problem the creative work needs to solve.
             </p>
 
-          </div>
+          </article>
 
 
-          <div class="process-card reveal">
+          <article class="process-step reveal">
 
-            <span>03</span>
+            <span>
+              02
+            </span>
 
-            <h3>Create</h3>
+            <h3>
+              Define
+            </h3>
 
             <p>
-              Ideas become purposeful visual systems through focused creative
-              development and production.
+              We establish the creative direction, message,
+              visual language and deliverables.
             </p>
 
-          </div>
+          </article>
 
 
-          <div class="process-card reveal">
+          <article class="process-step reveal">
 
-            <span>04</span>
+            <span>
+              03
+            </span>
 
-            <h3>Deliver</h3>
+            <h3>
+              Create
+            </h3>
 
             <p>
-              Final assets are refined, packaged and prepared for the
-              platforms where they will live.
+              We develop, refine and produce the work with
+              attention to craft, consistency and detail.
             </p>
 
-          </div>
+          </article>
+
+
+          <article class="process-step reveal">
+
+            <span>
+              04
+            </span>
+
+            <h3>
+              Deliver
+            </h3>
+
+            <p>
+              Final assets are prepared for their intended platforms,
+              audiences and real-world applications.
+            </p>
+
+          </article>
+
 
         </div>
 
@@ -1904,34 +1678,37 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          CREATIVE PRINCIPLE
-    ========================== -->
-    <section class="testimonial section-orange">
+    ====================================== -->
+
+    <section class="testimonial section-light">
 
       <div class="container testimonial-inner reveal">
 
         <p class="section-kicker">
-          06 / Creative principle
+          Creative principle
         </p>
 
         <blockquote>
-          “Good creative work should make a business feel more confident
-          about showing up in the world.”
+          “Good design gets attention.
+          Great storytelling gives people
+          a reason to remember.”
         </blockquote>
 
-        <div class="quote-mark">
-          V
-        </div>
+        <span>
+          — Vantera Creatives
+        </span>
 
       </div>
 
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          INSIGHTS
-    ========================== -->
+    ====================================== -->
+
     <section
       class="insights section-light"
       id="insights"
@@ -1944,19 +1721,22 @@
           <div>
 
             <p class="section-kicker">
-              07 / Insights
+              06 / Insights
             </p>
 
             <h2>
-              Ideas worth<br />
-              <span>thinking about.</span>
+              Ideas worth
+              <br />
+              <span>
+                exploring.
+              </span>
             </h2>
 
           </div>
 
           <p class="section-intro">
-            Perspectives on design, media, storytelling and the creative
-            industry from the Vantera studio.
+            Thoughts on design, storytelling, creativity,
+            business and the changing visual culture around us.
           </p>
 
         </div>
@@ -1967,90 +1747,63 @@
 
           <article class="insight-card reveal">
 
-            <div class="insight-number">
+            <span class="insight-number">
               01
-            </div>
-
-            <div>
-
-              <p class="insight-type">
-                Creative Thinking
-              </p>
-
-              <h3>
-                Why good design starts with a better question.
-              </h3>
-
-              <p>
-                A look at why understanding the problem often matters more
-                than jumping straight into visual execution.
-              </p>
-
-            </div>
-
-            <span class="insight-arrow">
-              ↗
             </span>
+
+            <span class="insight-category">
+              DESIGN
+            </span>
+
+            <h3>
+              Why distinctive visual identities matter for growing businesses.
+            </h3>
+
+            <a href="#contact" class="text-link">
+              Read more <span>↗</span>
+            </a>
 
           </article>
 
 
           <article class="insight-card reveal">
 
-            <div class="insight-number">
+            <span class="insight-number">
               02
-            </div>
-
-            <div>
-
-              <p class="insight-type">
-                Visual Culture
-              </p>
-
-              <h3>
-                What makes a brand memorable in a crowded feed?
-              </h3>
-
-              <p>
-                Exploring the relationship between visual identity,
-                consistency, context and attention.
-              </p>
-
-            </div>
-
-            <span class="insight-arrow">
-              ↗
             </span>
+
+            <span class="insight-category">
+              STORYTELLING
+            </span>
+
+            <h3>
+              The difference between creating content and telling a story.
+            </h3>
+
+            <a href="#contact" class="text-link">
+              Read more <span>↗</span>
+            </a>
 
           </article>
 
 
           <article class="insight-card reveal">
 
-            <div class="insight-number">
+            <span class="insight-number">
               03
-            </div>
-
-            <div>
-
-              <p class="insight-type">
-                Storytelling
-              </p>
-
-              <h3>
-                From information to stories people actually remember.
-              </h3>
-
-              <p>
-                How journalism, design and multimedia can work together to
-                make communication more human.
-              </p>
-
-            </div>
-
-            <span class="insight-arrow">
-              ↗
             </span>
+
+            <span class="insight-category">
+              CREATIVE BUSINESS
+            </span>
+
+            <h3>
+              What ambitious brands should expect from a creative partner.
+            </h3>
+
+            <a href="#contact" class="text-link">
+              Read more <span>↗</span>
+            </a>
 
           </article>
 
@@ -2062,9 +1815,10 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =====================================
          CONTACT
-    ========================== -->
+    ====================================== -->
+
     <section
       class="contact section-dark"
       id="contact"
@@ -2075,61 +1829,43 @@
 
         <div class="contact-copy reveal">
 
-          <p class="section-kicker">
-            08 / Start a project
+          <p class="section-kicker light">
+            07 / Start a project
           </p>
 
           <h2>
-            Have an idea?<br />
-            <span>Let's build it.</span>
+            Have an idea?
+            <br />
+            <span>
+              Let's build it.
+            </span>
           </h2>
 
           <p>
-            Tell me what you're working on. Whether you need a new identity,
-            campaign, content or ongoing creative support, let's start with
-            a conversation.
+            Tell us what you're working on, what you need
+            and where you want to take it.
           </p>
 
 
           <div class="contact-details">
 
             <a href="mailto:hello@vanteracreatives.com">
-
-              <small>Email</small>
-
-              <strong>
-                hello@vanteracreatives.com
-              </strong>
-
+              hello@vanteracreatives.com
             </a>
-
 
             <a
               href="https://wa.me/254700000000"
               target="_blank"
               rel="noopener"
             >
-
-              <small>WhatsApp</small>
-
-              <strong>
-                Start a conversation ↗
-              </strong>
-
+              WhatsApp ↗
             </a>
-
 
             <a
               href="#"
-              aria-label="Instagram profile"
+              aria-label="Vantera Creatives on Instagram"
             >
-
-              <small>Instagram</small>
-
-              <strong>
-                @vanteracreatives ↗
-              </strong>
-
+              Instagram ↗
             </a>
 
           </div>
@@ -2137,21 +1873,21 @@
         </div>
 
 
-        <!-- Contact form -->
         <form
-          class="contact-form reveal delay-1"
+          class="contact-form reveal"
           id="contactForm"
         >
 
           <div class="form-row">
 
             <label>
-              What's your name?
+
+              Your name
 
               <input
                 type="text"
                 name="name"
-                placeholder="Your name"
+                placeholder="John Doe"
                 required
               />
 
@@ -2159,7 +1895,8 @@
 
 
             <label>
-              Email address
+
+              Email
 
               <input
                 type="email"
@@ -2174,18 +1911,20 @@
 
 
           <label>
+
             Business / organisation
 
             <input
               type="text"
               name="business"
-              placeholder="Your business name"
+              placeholder="Your business"
             />
 
           </label>
 
 
           <label>
+
             What do you need?
 
             <select
@@ -2193,23 +1932,37 @@
               required
             >
 
-              <option
-                value=""
-                disabled
-                selected
-              >
+              <option value="">
                 Select a service
               </option>
 
-              <option>Brand Identity</option>
-              <option>Graphic Design</option>
-              <option>Social Media Content</option>
-              <option>Photography</option>
-              <option>Videography</option>
-              <option>Motion Graphics</option>
-              <option>Content & Campaigns</option>
-              <option>Monthly Creative Retainer</option>
-              <option>Other</option>
+              <option value="Brand Identity">
+                Brand Identity
+              </option>
+
+              <option value="Graphic Design">
+                Graphic Design
+              </option>
+
+              <option value="Photography">
+                Photography
+              </option>
+
+              <option value="Video Production">
+                Video Production
+              </option>
+
+              <option value="Motion Graphics">
+                Motion Graphics
+              </option>
+
+              <option value="Content & Campaigns">
+                Content &amp; Campaigns
+              </option>
+
+              <option value="Multiple services">
+                Multiple services
+              </option>
 
             </select>
 
@@ -2217,12 +1970,13 @@
 
 
           <label>
-            Tell me about the project
+
+            Tell us about the project
 
             <textarea
               name="message"
-              rows="5"
-              placeholder="What are you trying to achieve? What's the deadline?"
+              rows="6"
+              placeholder="Tell us what you're working on..."
               required
             ></textarea>
 
@@ -2231,24 +1985,16 @@
 
           <button
             type="submit"
-            class="btn btn-primary submit-btn"
+            class="btn btn-primary form-submit"
           >
-            Send project enquiry <span>↗</span>
+            Send enquiry <span>↗</span>
           </button>
 
 
-          <p class="form-note">
-            Submitting opens your email client with the enquiry prepared.
-            Replace the email and WhatsApp details in
-            <code>index.html</code> with your real contacts.
-          </p>
-
-
-          <div
+          <p
             class="form-success"
-            role="status"
             aria-live="polite"
-          ></div>
+          ></p>
 
         </form>
 
@@ -2259,124 +2005,92 @@
   </main>
 
 
-  <!-- =========================
+  <!-- =====================================
        FOOTER
-  ========================== -->
-  <footer class="footer section-dark">
+  ====================================== -->
 
-    <div class="container footer-top">
+  <footer class="site-footer">
 
-      <a
-        class="wordmark footer-wordmark"
-        href="#top"
-      >
-        VANTERA<i></i>
-      </a>
-
-      <p>
-        Branding · Design · Multimedia
-      </p>
-
-      <a
-        href="#top"
-        class="back-top"
-      >
-        Back to top ↑
-      </a>
-
-    </div>
+    <div class="container footer-grid">
 
 
-    <div class="container footer-bottom">
+      <div>
 
-      <span>
-        © <span id="year"></span>
-        Vantera Creatives. All rights reserved.
-      </span>
+        <a
+          href="#top"
+          class="wordmark"
+        >
+          <span>
+            VANTERA
+          </span>
+          <i>
+            /
+          </i>
+        </a>
 
-      <span>
-        Designed & built by John Ayodi.
-      </span>
+        <p>
+          Creative direction, design and multimedia
+          for brands with something to say.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#work">
+          Work
+        </a>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#insights">
+          Insights
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="year"></span>
+          Vantera Creatives.
+          All rights reserved.
+        </span>
+
+        <a href="#top">
+          Back to top ↑
+        </a>
+
+      </div>
 
     </div>
 
   </footer>
 
 
-  <!-- =========================
-       ABOUT JOHN MODAL
-  ========================== -->
-  <div class="about-john-modal" id="aboutJohnModal" aria-hidden="true">
-    <div class="about-john-backdrop" data-close-about-john></div>
-    <article class="about-john-panel" role="dialog" aria-modal="true" aria-labelledby="aboutJohnTitle">
-      <button class="about-john-close" type="button" data-close-about-john aria-label="Close About John">×</button>
-
-      <header class="about-john-header">
-        <span class="about-john-kicker">About John</span>
-        <h2 id="aboutJohnTitle" data-vc-editable="true">John Ayodi</h2>
-        <p data-vc-editable="true">Multimedia Producer · Graphic Designer · Visual Storyteller · Creative Lead</p>
-      </header>
-
-      <div class="about-john-article" id="aboutJohnArticle">
-        <p data-vc-editable="true"><strong>Write John's story here.</strong> This space is intentionally designed as a long-form article so you can paste a detailed biography, professional journey, creative philosophy, achievements, experience and personal perspective.</p>
-        <p data-vc-editable="true">Tell visitors where your creative journey began, what shaped your approach to design and storytelling, the kind of work you enjoy creating, and what you are building through Vantera Creatives.</p>
-
-        <h3 data-vc-editable="true">My approach</h3>
-        <p data-vc-editable="true">Use this section for a deeper explanation of how you think and work. You can write several paragraphs here without changing the structure of the page.</p>
-
-        <div class="pullquote" data-vc-editable="true">“Great creative work should communicate clearly, feel distinctive and leave something behind.”</div>
-
-        <h3 data-vc-editable="true">Beyond the portfolio</h3>
-        <p data-vc-editable="true">Use this space to discuss your interests, journalism and communication background, multimedia practice, technology interests, creative influences, goals and the kind of collaborations you are looking for.</p>
-      </div>
-
-      <section class="about-john-cv" aria-labelledby="johnCvTitle">
-        <div class="about-john-cv-head">
-          <h3 id="johnCvTitle" data-vc-editable="true">Curriculum Vitae</h3>
-          <span>Professional Profile</span>
-        </div>
-        <p class="about-john-cv-copy" data-vc-editable="true">
-          View or download John's latest CV for a fuller overview of his experience, education, creative capabilities and professional journey.
-        </p>
-        <div class="about-john-cv-actions">
-          <a
-            href="assets/cv/John-Ayodi-CV.pdf"
-            class="about-john-cv-link primary"
-            id="johnCvView"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View CV <span>↗</span>
-          </a>
-          <a
-            href="assets/cv/John-Ayodi-CV.pdf"
-            class="about-john-cv-link"
-            id="johnCvDownload"
-            download="John-Ayodi-CV.pdf"
-          >
-            Download CV <span>↓</span>
-          </a>
-          <span class="about-john-cv-file" id="johnCvFileName">Recommended: PDF format</span>
-        </div>
-        <div class="about-john-cv-editor">
-          <label class="about-john-cv-upload" for="johnCvInput">
-            Upload / Replace CV <span>↑</span>
-          </label>
-          <input id="johnCvInput" type="file" accept="application/pdf,.pdf" />
-          <p class="about-john-cv-file">In EDIT SITE mode, choose your PDF. Save Draft for this browser or Export Editable HTML to embed the selected CV into the site.</p>
-        </div>
-      </section>
-
-    </article>
-  </div>
-
-  <!-- =========================
+  <!-- =====================================
        PROJECT MODAL
-  ========================== -->
+  ====================================== -->
+
   <div
-    class="modal"
+    class="project-modal"
     id="projectModal"
     aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
   >
 
     <div
@@ -2385,12 +2099,7 @@
     ></div>
 
 
-    <div
-      class="modal-panel"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modalTitle"
-    >
+    <div class="modal-panel">
 
       <button
         class="modal-close"
@@ -2402,432 +2111,38 @@
       </button>
 
 
-      <p
-        class="section-kicker"
-        id="modalType"
-      >
-        Project
-      </p>
+      <span id="modalType">
+        Selected work
+      </span>
 
 
       <h2 id="modalTitle">
-        Project title
+        Project
       </h2>
 
 
       <p id="modalDescription"></p>
 
-      <div class="project-modal-gallery" id="projectGallery" aria-live="polite"></div>
 
-      <div class="project-modal-footer">
-        <span class="project-modal-hint" id="modalImageHint">Add your project images in the matching assets/projects/ folder.</span>
-        <button type="button" class="btn btn-primary" data-close-modal>Close project ×</button>
-      </div>
+      <a
+        href="#contact"
+        class="btn btn-primary"
+        data-close-modal
+      >
+        Discuss a similar project
+        <span>↗</span>
+      </a>
 
     </div>
 
   </div>
 
 
-  <!-- JavaScript -->
-  <script>
-    (function(){
-      const openBtn = document.getElementById('aboutJohnOpen');
-      const modal = document.getElementById('aboutJohnModal');
-      if (!openBtn || !modal) return;
-      const closeControls = modal.querySelectorAll('[data-close-about-john]');
-      let lastFocus = null;
-
-      function openAboutJohn(){
-        lastFocus = document.activeElement;
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden','false');
-        document.body.classList.add('about-john-open');
-        const close = modal.querySelector('.about-john-close');
-        if (close) close.focus();
-      }
-      function closeAboutJohn(){
-        modal.classList.remove('open');
-        modal.setAttribute('aria-hidden','true');
-        document.body.classList.remove('about-john-open');
-        if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
-      }
-
-      openBtn.addEventListener('click', openAboutJohn);
-      closeControls.forEach(control => control.addEventListener('click', closeAboutJohn));
-      document.addEventListener('keydown', event => {
-        if (event.key === 'Escape' && modal.classList.contains('open')) closeAboutJohn();
-      });
-    })();
-  </script>
-
-
-  <script>
-    (function () {
-      const items = document.querySelectorAll(".service-accordion-item");
-      const modal = document.getElementById("projectModal");
-      const modalTitle = document.getElementById("modalTitle");
-      const modalType = document.getElementById("modalType");
-      const modalDescription = document.getElementById("modalDescription");
-      const projectGallery = document.getElementById("projectGallery");
-      const modalImageHint = document.getElementById("modalImageHint");
-
-      function closeItem(item) {
-        item.classList.remove("is-open");
-        item.setAttribute("aria-expanded", "false");
-        const panel = document.getElementById(item.getAttribute("aria-controls"));
-        if (panel) panel.hidden = true;
-      }
-
-      function toggleItem(item) {
-        const isOpen = item.classList.contains("is-open");
-        items.forEach(other => {
-          if (other !== item) closeItem(other);
-        });
-        if (isOpen) {
-          closeItem(item);
-          return;
-        }
-        item.classList.add("is-open");
-        item.setAttribute("aria-expanded", "true");
-        const panel = document.getElementById(item.getAttribute("aria-controls"));
-        if (panel) panel.hidden = false;
-      }
-
-      function escapeHtml(value) {
-        return String(value).replace(/[&<>'"]/g, char => ({
-          "&":"&amp;", "<":"&lt;", ">":"&gt;", "'":"&#39;", '"':"&quot;"
-        })[char]);
-      }
-
-      function openServiceProject(project) {
-        if (!modal || !modalTitle || !modalType || !modalDescription) return;
-
-        const slug = project.dataset.project || "";
-        const images = (project.dataset.images || "").split(",").map(v => v.trim()).filter(Boolean);
-        modalTitle.textContent = project.dataset.title || "Project";
-        modalType.textContent = project.dataset.type || "Project";
-        modalDescription.textContent = project.dataset.description || "";
-        modalImageHint.textContent = slug
-          ? `Upload images to assets/projects/${slug}/ and name them 01.jpg, 02.jpg and 03.jpg.`
-          : "Add project images in the matching assets/projects/ folder.";
-
-        projectGallery.innerHTML = images.map((src, index) => `
-          <div class="project-image-card${index === 0 ? " featured" : ""}">
-            <img src="${escapeHtml(src)}" alt="${escapeHtml(project.dataset.title || "Project image")} — image ${index + 1}" loading="${index === 0 ? "eager" : "lazy"}"
-                 onerror="this.style.display='none'; this.nextElementSibling.hidden=false;" />
-            <div class="project-image-fallback" hidden>
-              Add image ${index + 1} here:<br><strong>${escapeHtml(src)}</strong>
-            </div>
-          </div>
-        `).join("");
-
-        modal.classList.add("open");
-        modal.setAttribute("aria-hidden", "false");
-        document.body.classList.add("modal-open");
-      }
-
-      items.forEach(item => {
-        item.addEventListener("click", function (event) {
-          const project = event.target.closest(".service-project");
-          if (project) {
-            event.stopPropagation();
-            openServiceProject(project);
-            return;
-          }
-          toggleItem(item);
-        });
-
-        item.addEventListener("keydown", function (event) {
-          if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault();
-            toggleItem(item);
-          }
-        });
-      });
-
-      document.querySelectorAll("[data-close-modal]").forEach(control => {
-        control.addEventListener("click", () => {
-          if (!modal) return;
-          modal.classList.remove("open");
-          modal.setAttribute("aria-hidden", "true");
-          document.body.classList.remove("modal-open");
-        });
-      });
-
-      document.addEventListener("keydown", event => {
-        if (event.key === "Escape" && modal && modal.classList.contains("open")) {
-          modal.classList.remove("open");
-          modal.setAttribute("aria-hidden", "true");
-          document.body.classList.remove("modal-open");
-        }
-      });
-    })();
-  </script>
+  <!-- =====================================
+       JAVASCRIPT
+  ====================================== -->
 
   <script src="script.js"></script>
-
-
-<!-- =========================
-     VANTERA VISUAL EDITOR
-========================== -->
-<button class="vc-editor-toggle" id="vcEditorToggle" type="button" aria-expanded="false">EDIT SITE</button>
-
-<aside class="vc-editor-panel" id="vcEditorPanel" aria-label="Vantera visual editor">
-  <h3>Vantera Visual Editor</h3>
-  <p>Edit text directly on the preview, replace images, adjust the core brand colours, then save the draft or export the edited HTML.</p>
-
-  <div class="vc-editor-grid">
-    <div class="vc-editor-field">
-      <label for="vcNavy">Navy</label>
-      <input id="vcNavy" type="color" value="#192B65" />
-    </div>
-    <div class="vc-editor-field">
-      <label for="vcOrange">Orange</label>
-      <input id="vcOrange" type="color" value="#FC692E" />
-    </div>
-  </div>
-
-  <div class="vc-editor-actions">
-    <button class="vc-editor-btn primary" id="vcSave" type="button">Save Draft</button>
-    <button class="vc-editor-btn" id="vcReset" type="button">Reset Draft</button>
-    <button class="vc-editor-btn full" id="vcExport" type="button">Export Editable HTML</button>
-  </div>
-  <div class="vc-editor-status" id="vcStatus"></div>
-</aside>
-
-<input id="vcImageInput" type="file" accept="image/*" hidden />
-
-<script id="vantera-visual-editor">
-(function(){
-  const body=document.body;
-  const root=document.documentElement;
-  const toggle=document.getElementById('vcEditorToggle');
-  const panel=document.getElementById('vcEditorPanel');
-  const saveBtn=document.getElementById('vcSave');
-  const resetBtn=document.getElementById('vcReset');
-  const exportBtn=document.getElementById('vcExport');
-  const navy=document.getElementById('vcNavy');
-  const orange=document.getElementById('vcOrange');
-  const status=document.getElementById('vcStatus');
-  const imageInput=document.getElementById('vcImageInput');
-  const cvInput=document.getElementById('johnCvInput');
-  const cvView=document.getElementById('johnCvView');
-  const cvDownload=document.getElementById('johnCvDownload');
-  const cvFileName=document.getElementById('johnCvFileName');
-  const STORAGE_KEY='vanteraVisualEditorStateV2';
-
-  const editableSelectors=[
-    'main h1','main h2','main h3','main p','main blockquote','main strong',
-    'main .eyebrow','main .section-kicker','main .project-meta span','main .project-meta h3',
-    'main .service-project strong','main .service-project span',
-    '.about-john-modal [data-vc-editable="true"]',
-    'main .process-card h3','main .process-card p',
-    'main .insight-type','main .insight-card h3','main .insight-card p',
-    'main .contact-details strong','footer p','footer .footer-bottom span'
-  ];
-
-  function markEditableNodes(){
-    editableSelectors.forEach(sel=>document.querySelectorAll(sel).forEach(el=>{
-      if(el.closest('#projectModal')) return;
-      el.dataset.vcEditable='true';
-      if(!el.dataset.vcKey){
-        el.dataset.vcKey='text-'+Math.random().toString(36).slice(2,10)+'-'+document.querySelectorAll('[data-vc-key]').length;
-      }
-      el.contentEditable='false';
-      el.spellcheck=true;
-    }));
-    document.querySelectorAll('main img,.project-modal-gallery img').forEach(img=>{
-      img.dataset.vcImage='true';
-      if(!img.dataset.vcKey) img.dataset.vcKey='img-'+Math.random().toString(36).slice(2,10);
-    });
-  }
-
-  function applyColors(){
-    let style=document.getElementById('vc-live-colors');
-    if(!style){style=document.createElement('style');style.id='vc-live-colors';document.head.appendChild(style);}
-    style.textContent=`
-      :root{--vc-navy:${navy.value};--vc-orange:${orange.value};}
-      .section-dark,.services,.contact,.footer{background:${navy.value} !important;}
-      .section-orange{background:${orange.value} !important;}
-      .btn-primary,.nav-cta{background:${orange.value} !important;border-color:${orange.value} !important;}
-      .filter.active,.service-project-number,.service-project b,.quote-mark{color:${orange.value} !important;}
-      .dot{background:${orange.value} !important;}
-      .art-orange{background:${orange.value} !important;}
-      .service-accordion-item:focus-visible{outline-color:${orange.value} !important;}
-    `;
-  }
-
-  function setEditing(on){
-    body.classList.toggle('vc-editing',on);
-    toggle.classList.toggle('is-active',on);
-    toggle.textContent=on?'DONE EDITING':'EDIT SITE';
-    toggle.setAttribute('aria-expanded',String(on));
-    panel.classList.toggle('open',on);
-    document.querySelectorAll('[data-vc-editable="true"]').forEach(el=>el.contentEditable=on?'true':'false');
-    status.textContent=on?'Click outlined text to edit. Click an image to replace it.':'Edit mode off.';
-  }
-
-  function collectState(){
-    const text={},images={};
-    document.querySelectorAll('[data-vc-editable="true"]').forEach(el=>text[el.dataset.vcKey]=el.innerHTML);
-    document.querySelectorAll('img[data-vc-image="true"]').forEach(img=>images[img.dataset.vcKey]=img.src);
-    return {text,images,cvHref:cvView ? cvView.getAttribute('href') : '',cvFileName:cvFileName ? cvFileName.textContent : '',navy:navy.value,orange:orange.value};
-  }
-
-  function saveDraft(){
-    try{
-      localStorage.setItem(STORAGE_KEY,JSON.stringify(collectState()));
-      status.textContent='Draft saved in this browser.';
-    }catch(e){status.textContent='Local save failed. Use Export Editable HTML.';}
-  }
-
-  function restoreDraft(){
-    try{
-      const raw=localStorage.getItem(STORAGE_KEY); if(!raw) return;
-      const state=JSON.parse(raw);
-      if(state.navy) navy.value=state.navy;
-      if(state.orange) orange.value=state.orange;
-      if(state.text) Object.entries(state.text).forEach(([key,html])=>{
-        const el=document.querySelector('[data-vc-key="'+CSS.escape(key)+'"]'); if(el) el.innerHTML=html;
-      });
-      if(state.images) Object.entries(state.images).forEach(([key,src])=>{
-        const img=document.querySelector('img[data-vc-key="'+CSS.escape(key)+'"]'); if(img) img.src=src;
-      });
-      if(state.cvHref && cvView && cvDownload){
-        cvView.href=state.cvHref;
-        cvDownload.href=state.cvHref;
-        if(state.cvFileName && cvFileName) cvFileName.textContent=state.cvFileName;
-      }
-      applyColors();
-    }catch(e){}
-  }
-
-  toggle.addEventListener('click',()=>setEditing(!body.classList.contains('vc-editing')));
-  navy.addEventListener('input',applyColors);
-  orange.addEventListener('input',applyColors);
-  saveBtn.addEventListener('click',saveDraft);
-  resetBtn.addEventListener('click',()=>{localStorage.removeItem(STORAGE_KEY);status.textContent='Saved draft removed. Reloading original version...';setTimeout(()=>location.reload(),250);});
-
-  document.addEventListener('click',e=>{
-    if(!body.classList.contains('vc-editing')) return;
-    const img=e.target.closest('img[data-vc-image="true"]');
-    if(!img) return;
-    e.preventDefault();
-    imageInput.dataset.targetKey=img.dataset.vcKey;
-    imageInput.click();
-  });
-
-  imageInput.addEventListener('change',()=>{
-    const file=imageInput.files && imageInput.files[0]; if(!file) return;
-    const key=imageInput.dataset.targetKey;
-    const img=document.querySelector('img[data-vc-key="'+CSS.escape(key)+'"]'); if(!img) return;
-    const reader=new FileReader();
-    reader.onload=()=>{img.src=reader.result;status.textContent='Image replaced. Save or export to keep it.';};
-    reader.readAsDataURL(file);
-    imageInput.value='';
-  });
-
-  if(cvInput){
-    cvInput.addEventListener('change',()=>{
-      const file=cvInput.files && cvInput.files[0];
-      if(!file) return;
-      if(file.type !== 'application/pdf'){
-        status.textContent='Please choose a PDF CV.';
-        cvInput.value='';
-        return;
-      }
-      if(file.size > 6 * 1024 * 1024){
-        status.textContent='Please keep the CV PDF under 6 MB for browser storage/export.';
-        cvInput.value='';
-        return;
-      }
-      const reader=new FileReader();
-      reader.onload=()=>{
-        const dataUrl=reader.result;
-        if(cvView) cvView.href=dataUrl;
-        if(cvDownload) cvDownload.href=dataUrl;
-        if(cvFileName) cvFileName.textContent='Selected: '+file.name;
-        status.textContent='CV uploaded. Save Draft or Export Editable HTML to keep it.';
-      };
-      reader.readAsDataURL(file);
-      cvInput.value='';
-    });
-  }
-
-  exportBtn.addEventListener('click',()=>{
-    try{
-      saveDraft();
-      const clone=document.documentElement.cloneNode(true);
-      const live=clone.querySelector('#vc-live-colors'); if(live) live.remove();
-      const statusClone=clone.querySelector('#vcStatus'); if(statusClone) statusClone.textContent='';
-      const html='<!DOCTYPE html>\n'+clone.outerHTML;
-      const blob=new Blob([html],{type:'text/html'});
-      const url=URL.createObjectURL(blob);
-      const a=document.createElement('a'); a.href=url; a.download='vantera-creatives-editable.html';
-      document.body.appendChild(a); a.click(); a.remove();
-      setTimeout(()=>URL.revokeObjectURL(url),1000);
-      status.textContent='Editable HTML exported.';
-    }catch(e){status.textContent='Export failed. Save the draft and try again.';}
-  });
-
-  markEditableNodes();
-  restoreDraft();
-  applyColors();
-  setEditing(false);
-})();
-</script>
-
-  <script>
-    (function () {
-      const items = document.querySelectorAll('.service-list-compact .service-accordion-item');
-      const image = document.getElementById('serviceFeatureImage');
-      const fallback = document.getElementById('serviceFeatureFallback');
-      const fallbackTitle = document.getElementById('serviceFeatureFallbackTitle');
-      const title = document.getElementById('serviceFeatureTitle');
-      const label = document.getElementById('serviceFeatureLabel');
-      const index = document.getElementById('serviceFeatureIndex');
-      if (!items.length || !image) return;
-
-      function updateFeature(item) {
-        const src = item.dataset.featureImage || '';
-        const featureTitle = item.dataset.featureTitle || 'Selected Work';
-        const featureLabel = item.dataset.featureLabel || 'Selected project';
-        const featureIndex = item.querySelector('.service-no')?.textContent.trim() || '';
-        title.textContent = featureTitle;
-        label.textContent = featureLabel;
-        index.textContent = featureIndex;
-        fallbackTitle.textContent = featureTitle;
-        image.classList.add('is-changing');
-
-        const probe = new Image();
-        probe.onload = function () {
-          image.src = src;
-          image.alt = featureTitle + ' project preview';
-          image.style.display = 'block';
-          fallback.hidden = true;
-          requestAnimationFrame(() => image.classList.remove('is-changing'));
-        };
-        probe.onerror = function () {
-          image.style.display = 'none';
-          fallback.hidden = false;
-          image.classList.remove('is-changing');
-        };
-        probe.src = src;
-      }
-
-      items.forEach(item => {
-        item.addEventListener('mouseenter', () => updateFeature(item));
-        item.addEventListener('focusin', () => updateFeature(item));
-        item.addEventListener('click', (event) => {
-          if (event.target.closest('.service-project')) return;
-          updateFeature(item);
-        });
-      });
-
-      updateFeature(items[0]);
-    })();
-  </script>
 
 </body>
 </html>
