@@ -138,6 +138,87 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Project detail viewer */
+    .project-modal-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .project-modal-gallery .project-image-card {
+      position: relative;
+      min-height: 220px;
+      overflow: hidden;
+      background: #f3f4f6;
+      border: 1px solid rgba(14,21,33,.12);
+    }
+
+    .project-modal-gallery .project-image-card.featured {
+      grid-column: 1 / -1;
+      min-height: 430px;
+    }
+
+    .project-modal-gallery img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #eef0f3;
+    }
+
+    .project-image-fallback {
+      min-height: inherit;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      text-align: center;
+      color: rgba(14,21,33,.62);
+      font-size: .82rem;
+      line-height: 1.5;
+    }
+
+    .project-modal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(14,21,33,.1);
+    }
+
+    .project-modal-hint {
+      font-size: .76rem;
+      line-height: 1.45;
+      opacity: .65;
+    }
+
+    .service-project {
+      cursor: pointer;
+    }
+
+    .service-project b {
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 700px) {
+      .project-modal-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .project-modal-gallery .project-image-card.featured {
+        grid-column: auto;
+        min-height: 320px;
+      }
+
+      .project-modal-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
   </style>
 
 </head>
@@ -470,6 +551,8 @@
             class="project-card project-large reveal"
             data-category="branding"
             data-title="Vantera Creatives — Brand Identity"
+                           data-project="vantera-brand-identity"
+                           data-images="assets/projects/vantera-brand-identity/01.jpg,assets/projects/vantera-brand-identity/02.jpg,assets/projects/vantera-brand-identity/03.jpg"
             data-type="Brand Identity"
             data-description="A complete visual identity system built around confidence, creative energy and editorial restraint."
             tabindex="0"
@@ -606,6 +689,8 @@
             class="project-card project-wide reveal"
             data-category="video"
             data-title="Editorial Stories — Multimedia"
+                           data-project="editorial-stories"
+                           data-images="assets/projects/editorial-stories/01.jpg,assets/projects/editorial-stories/02.jpg,assets/projects/editorial-stories/03.jpg"
             data-type="Video & Editorial"
             data-description="Editorial storytelling through interviews, photography, video and social-first visual packaging."
             tabindex="0"
@@ -697,6 +782,8 @@
             class="project-card reveal"
             data-category="motion"
             data-title="Motion Stories — Visual Direction"
+                           data-project="motion-stories"
+                           data-images="assets/projects/motion-stories/01.jpg,assets/projects/motion-stories/02.jpg,assets/projects/motion-stories/03.jpg"
             data-type="Motion Graphics"
             data-description="Motion-led visual communication combining typography, composition and movement for digital platforms."
             tabindex="0"
@@ -807,6 +894,8 @@
 
                   <article class="service-project"
                            data-title="Vantera Creatives — Brand Identity"
+                           data-project="vantera-brand-identity"
+                           data-images="assets/projects/vantera-brand-identity/01.jpg,assets/projects/vantera-brand-identity/02.jpg,assets/projects/vantera-brand-identity/03.jpg"
                            data-type="Brand Identity"
                            data-description="A complete visual identity system for Vantera Creatives, built around confidence, creative energy and editorial restraint.">
                     <div class="service-project-number">01A</div>
@@ -814,11 +903,13 @@
                       <strong>Vantera Brand Identity</strong>
                       <span>Logo • Colour • Typography • Applications</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Brand Guidelines — Visual System"
+                           data-project="visual-identity-system"
+                           data-images="assets/projects/visual-identity-system/01.jpg,assets/projects/visual-identity-system/02.jpg,assets/projects/visual-identity-system/03.jpg"
                            data-type="Brand Identity"
                            data-description="A structured visual language defining logo use, colour, typography, layout and brand applications for consistent communication.">
                     <div class="service-project-number">01B</div>
@@ -826,11 +917,13 @@
                       <strong>Visual Identity System</strong>
                       <span>Guidelines • Assets • Brand consistency</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Packaging & Brand Applications"
+                           data-project="brand-applications"
+                           data-images="assets/projects/brand-applications/01.jpg,assets/projects/brand-applications/02.jpg,assets/projects/brand-applications/03.jpg"
                            data-type="Brand Identity"
                            data-description="Selected brand touchpoints showing how the identity translates into packaging, stationery, merchandise and real-world applications.">
                     <div class="service-project-number">01C</div>
@@ -838,7 +931,7 @@
                       <strong>Brand Applications</strong>
                       <span>Packaging • Stationery • Mockups</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                 </div>
@@ -864,6 +957,8 @@
 
                   <article class="service-project"
                            data-title="Not Just a Design — Vantera Campaign"
+                           data-project="not-just-a-design"
+                           data-images="assets/projects/not-just-a-design/01.jpg,assets/projects/not-just-a-design/02.jpg,assets/projects/not-just-a-design/03.jpg"
                            data-type="Campaign Design"
                            data-description="A visual campaign built around the idea that effective design is more than decoration: it is a strategic visual statement.">
                     <div class="service-project-number">02A</div>
@@ -871,11 +966,13 @@
                       <strong>Not Just a Design</strong>
                       <span>Campaign • Social • Key Visual</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Real Estate Visual Marketing"
+                           data-project="real-estate-visuals"
+                           data-images="assets/projects/real-estate-visuals/01.jpg,assets/projects/real-estate-visuals/02.jpg,assets/projects/real-estate-visuals/03.jpg"
                            data-type="Graphic Design"
                            data-description="Premium property marketing visuals combining strong typography, hierarchy, image treatment and social-first layouts.">
                     <div class="service-project-number">02B</div>
@@ -883,11 +980,13 @@
                       <strong>Real Estate Visuals</strong>
                       <span>Advertising • Social • Marketing collateral</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Editorial & Publication Design"
+                           data-project="editorial-design"
+                           data-images="assets/projects/editorial-design/01.jpg,assets/projects/editorial-design/02.jpg,assets/projects/editorial-design/03.jpg"
                            data-type="Editorial Design"
                            data-description="Multi-page editorial layouts designed for clarity, hierarchy, visual rhythm and professional presentation across print and digital formats.">
                     <div class="service-project-number">02C</div>
@@ -895,7 +994,7 @@
                       <strong>Editorial Design</strong>
                       <span>Magazines • Reports • Presentations</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                 </div>
@@ -921,6 +1020,8 @@
 
                   <article class="service-project"
                            data-title="Brand & Portrait Photography"
+                           data-project="brand-portraits"
+                           data-images="assets/projects/brand-portraits/01.jpg,assets/projects/brand-portraits/02.jpg,assets/projects/brand-portraits/03.jpg"
                            data-type="Photography"
                            data-description="Portrait-led photography designed to humanise brands and communicate personality, confidence and credibility.">
                     <div class="service-project-number">03A</div>
@@ -928,11 +1029,13 @@
                       <strong>Brand Portraits</strong>
                       <span>Portraits • Editorial • Corporate</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Product & Commercial Photography"
+                           data-project="commercial-photography"
+                           data-images="assets/projects/commercial-photography/01.jpg,assets/projects/commercial-photography/02.jpg,assets/projects/commercial-photography/03.jpg"
                            data-type="Photography"
                            data-description="Clean, high-impact product imagery designed for advertising, ecommerce, campaigns and branded communications.">
                     <div class="service-project-number">03B</div>
@@ -940,11 +1043,13 @@
                       <strong>Commercial Photography</strong>
                       <span>Products • Campaigns • Advertising</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Visual Stories"
+                           data-project="visual-stories"
+                           data-images="assets/projects/visual-stories/01.jpg,assets/projects/visual-stories/02.jpg,assets/projects/visual-stories/03.jpg"
                            data-type="Photography"
                            data-description="Documentary and editorial photography that captures people, places and human moments with context and authenticity.">
                     <div class="service-project-number">03C</div>
@@ -952,7 +1057,7 @@
                       <strong>Visual Stories</strong>
                       <span>Documentary • Events • Editorial</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                 </div>
@@ -978,6 +1083,8 @@
 
                   <article class="service-project"
                            data-title="Editorial Stories — Multimedia"
+                           data-project="editorial-stories"
+                           data-images="assets/projects/editorial-stories/01.jpg,assets/projects/editorial-stories/02.jpg,assets/projects/editorial-stories/03.jpg"
                            data-type="Video & Editorial"
                            data-description="Editorial storytelling through interviews, photography, video and social-first visual packaging.">
                     <div class="service-project-number">04A</div>
@@ -985,11 +1092,13 @@
                       <strong>Editorial Stories</strong>
                       <span>Interviews • Reporting • Social video</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Brand & Promotional Video"
+                           data-project="promotional-video"
+                           data-images="assets/projects/promotional-video/01.jpg,assets/projects/promotional-video/02.jpg,assets/projects/promotional-video/03.jpg"
                            data-type="Video Production"
                            data-description="Short-form and campaign-oriented video designed to explain, promote and strengthen brand communication.">
                     <div class="service-project-number">04B</div>
@@ -997,11 +1106,13 @@
                       <strong>Promotional Video</strong>
                       <span>Brand films • Reels • Campaigns</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Event & Social Coverage"
+                           data-project="event-social-video"
+                           data-images="assets/projects/event-social-video/01.jpg,assets/projects/event-social-video/02.jpg,assets/projects/event-social-video/03.jpg"
                            data-type="Video Production"
                            data-description="Fast-turnaround event and social video packages built for digital audiences and real-time publishing.">
                     <div class="service-project-number">04C</div>
@@ -1009,7 +1120,7 @@
                       <strong>Event & Social Video</strong>
                       <span>Events • Reels • Digital coverage</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                 </div>
@@ -1035,6 +1146,8 @@
 
                   <article class="service-project"
                            data-title="Motion Stories — Visual Direction"
+                           data-project="motion-stories"
+                           data-images="assets/projects/motion-stories/01.jpg,assets/projects/motion-stories/02.jpg,assets/projects/motion-stories/03.jpg"
                            data-type="Motion Graphics"
                            data-description="Motion-led visual communication combining typography, composition and movement for digital platforms.">
                     <div class="service-project-number">05A</div>
@@ -1042,11 +1155,13 @@
                       <strong>Motion Stories</strong>
                       <span>Typography • Brand motion • Social</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Animated Brand Systems"
+                           data-project="animated-brand-systems"
+                           data-images="assets/projects/animated-brand-systems/01.jpg,assets/projects/animated-brand-systems/02.jpg,assets/projects/animated-brand-systems/03.jpg"
                            data-type="Motion Graphics"
                            data-description="Flexible motion systems that bring logos, graphic elements and brand language to life across digital touchpoints.">
                     <div class="service-project-number">05B</div>
@@ -1054,11 +1169,13 @@
                       <strong>Animated Brand Systems</strong>
                       <span>Logo motion • Transitions • Digital assets</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Explainers & Social Motion"
+                           data-project="social-motion"
+                           data-images="assets/projects/social-motion/01.jpg,assets/projects/social-motion/02.jpg,assets/projects/social-motion/03.jpg"
                            data-type="Motion Graphics"
                            data-description="Short animated explainers and social-first motion pieces built to clarify ideas and increase attention.">
                     <div class="service-project-number">05C</div>
@@ -1066,7 +1183,7 @@
                       <strong>Social Motion</strong>
                       <span>Explainers • Reels • Animated graphics</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                 </div>
@@ -1092,6 +1209,8 @@
 
                   <article class="service-project"
                            data-title="Integrated Social Campaign"
+                           data-project="integrated-campaigns"
+                           data-images="assets/projects/integrated-campaigns/01.jpg,assets/projects/integrated-campaigns/02.jpg,assets/projects/integrated-campaigns/03.jpg"
                            data-type="Campaign Design"
                            data-description="A coordinated campaign system connecting creative strategy, key visuals, social assets, motion and content rollout.">
                     <div class="service-project-number">06A</div>
@@ -1099,11 +1218,13 @@
                       <strong>Integrated Campaigns</strong>
                       <span>Strategy • Design • Social • Motion</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Content Systems"
+                           data-project="content-systems"
+                           data-images="assets/projects/content-systems/01.jpg,assets/projects/content-systems/02.jpg,assets/projects/content-systems/03.jpg"
                            data-type="Content & Campaigns"
                            data-description="Repeatable content systems designed to maintain visual consistency while adapting to multiple platforms and formats.">
                     <div class="service-project-number">06B</div>
@@ -1111,11 +1232,13 @@
                       <strong>Content Systems</strong>
                       <span>Templates • Social • Brand consistency</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                   <article class="service-project"
                            data-title="Creative Direction"
+                           data-project="creative-direction"
+                           data-images="assets/projects/creative-direction/01.jpg,assets/projects/creative-direction/02.jpg,assets/projects/creative-direction/03.jpg"
                            data-type="Creative Direction"
                            data-description="Concept development and visual direction that align messaging, design and production around one clear creative idea.">
                     <div class="service-project-number">06C</div>
@@ -1123,7 +1246,7 @@
                       <strong>Creative Direction</strong>
                       <span>Concept • Art direction • Production</span>
                     </div>
-                    <b>↗</b>
+                    <b>OPEN ↗</b>
                   </article>
 
                 </div>
@@ -1779,14 +1902,12 @@
 
       <p id="modalDescription"></p>
 
+      <div class="project-modal-gallery" id="projectGallery" aria-live="polite"></div>
 
-      <a
-        href="#contact"
-        class="btn btn-primary"
-        data-close-modal
-      >
-        Discuss a similar project ↗
-      </a>
+      <div class="project-modal-footer">
+        <span class="project-modal-hint" id="modalImageHint">Add your project images in the matching assets/projects/ folder.</span>
+        <button type="button" class="btn btn-primary" data-close-modal>Close project ×</button>
+      </div>
 
     </div>
 
@@ -1798,6 +1919,12 @@
   <script>
     (function () {
       const items = document.querySelectorAll(".service-accordion-item");
+      const modal = document.getElementById("projectModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalType = document.getElementById("modalType");
+      const modalDescription = document.getElementById("modalDescription");
+      const projectGallery = document.getElementById("projectGallery");
+      const modalImageHint = document.getElementById("modalImageHint");
 
       function closeItem(item) {
         item.classList.remove("is-open");
@@ -1808,42 +1935,60 @@
 
       function toggleItem(item) {
         const isOpen = item.classList.contains("is-open");
-
         items.forEach(other => {
           if (other !== item) closeItem(other);
         });
-
         if (isOpen) {
           closeItem(item);
           return;
         }
-
         item.classList.add("is-open");
         item.setAttribute("aria-expanded", "true");
         const panel = document.getElementById(item.getAttribute("aria-controls"));
         if (panel) panel.hidden = false;
       }
 
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>'"]/g, char => ({
+          "&":"&amp;", "<":"&lt;", ">":"&gt;", "'":"&#39;", '"':"&quot;"
+        })[char]);
+      }
+
+      function openServiceProject(project) {
+        if (!modal || !modalTitle || !modalType || !modalDescription) return;
+
+        const slug = project.dataset.project || "";
+        const images = (project.dataset.images || "").split(",").map(v => v.trim()).filter(Boolean);
+        modalTitle.textContent = project.dataset.title || "Project";
+        modalType.textContent = project.dataset.type || "Project";
+        modalDescription.textContent = project.dataset.description || "";
+        modalImageHint.textContent = slug
+          ? `Upload images to assets/projects/${slug}/ and name them 01.jpg, 02.jpg and 03.jpg.`
+          : "Add project images in the matching assets/projects/ folder.";
+
+        projectGallery.innerHTML = images.map((src, index) => `
+          <div class="project-image-card${index === 0 ? " featured" : ""}">
+            <img src="${escapeHtml(src)}" alt="${escapeHtml(project.dataset.title || "Project image")} — image ${index + 1}" loading="${index === 0 ? "eager" : "lazy"}"
+                 onerror="this.style.display='none'; this.nextElementSibling.hidden=false;" />
+            <div class="project-image-fallback" hidden>
+              Add image ${index + 1} here:<br><strong>${escapeHtml(src)}</strong>
+            </div>
+          </div>
+        `).join("");
+
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+      }
+
       items.forEach(item => {
         item.addEventListener("click", function (event) {
-          if (event.target.closest(".service-project")) {
-            const project = event.target.closest(".service-project");
-            const modal = document.getElementById("projectModal");
-            const modalTitle = document.getElementById("modalTitle");
-            const modalType = document.getElementById("modalType");
-            const modalDescription = document.getElementById("modalDescription");
-
-            if (modal && modalTitle && modalType && modalDescription) {
-              modalTitle.textContent = project.dataset.title || "Project";
-              modalType.textContent = project.dataset.type || "Project";
-              modalDescription.textContent = project.dataset.description || "";
-              modal.classList.add("open");
-              modal.setAttribute("aria-hidden", "false");
-              document.body.classList.add("modal-open");
-            }
+          const project = event.target.closest(".service-project");
+          if (project) {
+            event.stopPropagation();
+            openServiceProject(project);
             return;
           }
-
           toggleItem(item);
         });
 
@@ -1853,6 +1998,23 @@
             toggleItem(item);
           }
         });
+      });
+
+      document.querySelectorAll("[data-close-modal]").forEach(control => {
+        control.addEventListener("click", () => {
+          if (!modal) return;
+          modal.classList.remove("open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("modal-open");
+        });
+      });
+
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && modal && modal.classList.contains("open")) {
+          modal.classList.remove("open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("modal-open");
+        }
       });
     })();
   </script>
