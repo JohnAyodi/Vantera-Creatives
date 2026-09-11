@@ -482,6 +482,148 @@
       }
     }
 
+
+    /* Compact full-viewport services layout */
+    @media (min-width: 981px) {
+      .services-redesign {
+        min-height: calc(100vh - 72px);
+        height: calc(100vh - 72px);
+        padding-top: clamp(1.4rem, 2.4vh, 2.2rem);
+        padding-bottom: clamp(1.2rem, 2vh, 1.8rem);
+        overflow: hidden;
+      }
+
+      .services-redesign > .container {
+        height: 100%;
+      }
+
+      .services-stage {
+        height: 100%;
+        grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr);
+        gap: clamp(1.5rem, 3vw, 3.5rem);
+        align-items: stretch;
+      }
+
+      .services-copy {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+
+      .services-heading {
+        margin-bottom: clamp(.65rem, 1.2vh, 1rem);
+      }
+
+      .services-heading h2 {
+        font-size: clamp(1.65rem, 2.5vw, 2.55rem);
+        line-height: .96;
+        margin: .28rem 0 .45rem;
+      }
+
+      .services-intro {
+        max-width: 30rem;
+        font-size: .78rem;
+        line-height: 1.45;
+      }
+
+      .service-list-compact {
+        flex: 1;
+        min-height: 0;
+        overflow: visible;
+      }
+
+      .service-list-compact .service-item {
+        padding: .52rem 0;
+        grid-template-columns: 1.9rem minmax(0,1fr);
+        gap: .35rem;
+      }
+
+      .service-list-compact .service-item.is-open {
+        padding-bottom: .65rem;
+      }
+
+      .service-list-compact .service-no {
+        font-size: .58rem;
+        padding-top: .18rem;
+      }
+
+      .service-list-compact .service-heading h3 {
+        font-size: clamp(.9rem, 1.35vw, 1.12rem);
+        line-height: 1.08;
+      }
+
+      .service-list-compact .service-heading > p {
+        margin: .18rem 0 0;
+        font-size: .66rem;
+        line-height: 1.35;
+        max-width: 28rem;
+      }
+
+      .service-list-compact .service-icon {
+        width: 1.35rem;
+        height: 1.35rem;
+        font-size: .8rem;
+      }
+
+      .service-list-compact .service-details {
+        padding-top: .55rem;
+      }
+
+      .service-project-list {
+        gap: .25rem;
+      }
+
+      .service-list-compact .service-project {
+        padding: .48rem .6rem;
+      }
+
+      .service-list-compact .service-project strong {
+        font-size: .69rem;
+      }
+
+      .service-list-compact .service-project b {
+        font-size: .58rem;
+      }
+
+      .services-visual {
+        position: relative;
+        top: auto;
+        height: 100%;
+        min-height: 0;
+      }
+
+      .services-visual-frame {
+        height: 100%;
+        padding: 0;
+        border: 1px solid rgba(255,255,255,.13);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .services-visual-media {
+        flex: 1;
+        min-height: 0;
+        aspect-ratio: auto;
+      }
+
+      .services-visual-media::before {
+        inset: 5%;
+      }
+
+      .services-visual-meta {
+        padding: .7rem .9rem .65rem;
+      }
+
+      .services-visual-meta h3 {
+        font-size: 1rem;
+      }
+
+      .services-visual-note {
+        display: none;
+      }
+    }
+
     /* About John modal */
     .about-john-btn {
       appearance: none;
