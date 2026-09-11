@@ -35,6 +35,111 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Expanded Services / Service accordion */
+    .service-accordion-item {
+      position: relative;
+      cursor: pointer;
+      transition: padding .35s ease, border-color .35s ease;
+    }
+
+    .service-accordion-item:focus-visible {
+      outline: 2px solid #FC692E;
+      outline-offset: 4px;
+    }
+
+    .service-accordion-item.is-open {
+      padding-bottom: 1.5rem;
+    }
+
+    .service-heading {
+      min-width: 0;
+    }
+
+    .service-details {
+      display: block;
+      padding-top: 1.5rem;
+      animation: serviceReveal .35s ease both;
+    }
+
+    .service-project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .75rem;
+    }
+
+    .service-project {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: .8rem;
+      align-items: start;
+      padding: 1rem;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.12);
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+
+    .service-project:hover {
+      transform: translateY(-3px);
+      border-color: rgba(252,105,46,.75);
+      background: rgba(252,105,46,.07);
+    }
+
+    .service-project-number {
+      color: #FC692E;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      padding-top: .1rem;
+    }
+
+    .service-project strong {
+      display: block;
+      font-family: "MuseoModerno", sans-serif;
+      font-size: .98rem;
+      line-height: 1.2;
+      margin-bottom: .35rem;
+    }
+
+    .service-project span {
+      display: block;
+      font-size: .78rem;
+      opacity: .68;
+      line-height: 1.45;
+    }
+
+    .service-project b {
+      color: #FC692E;
+      font-size: 1rem;
+      transition: transform .2s ease;
+    }
+
+    .service-project:hover b {
+      transform: translate(2px,-2px);
+    }
+
+    .service-accordion-item .service-icon {
+      transition: transform .3s ease, color .3s ease;
+    }
+
+    .service-accordion-item.is-open .service-icon {
+      transform: rotate(45deg);
+      color: #FC692E;
+    }
+
+    @keyframes serviceReveal {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .service-project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -685,148 +790,350 @@
         </div>
 
 
-        <div class="service-list">
-
+        <div class="service-list service-accordion">
 
           <!-- SERVICE 01 -->
-          <div class="service-item reveal">
+          <div class="service-item service-accordion-item reveal" tabindex="0" role="button"
+               aria-expanded="false" aria-controls="service-panel-01">
+            <div class="service-no">01</div>
 
-            <div class="service-no">
-              01
-            </div>
-
-            <div>
-
+            <div class="service-heading">
               <h3>Brand Identity</h3>
+              <p>Logo systems, visual identities, brand guidelines, stationery,
+                packaging and distinctive brand assets.</p>
 
-              <p>
-                Logo systems, visual identities, brand guidelines, stationery,
-                packaging and distinctive brand assets.
-              </p>
+              <div class="service-details" id="service-panel-01" hidden>
+                <div class="service-project-grid">
 
+                  <article class="service-project"
+                           data-title="Vantera Creatives — Brand Identity"
+                           data-type="Brand Identity"
+                           data-description="A complete visual identity system for Vantera Creatives, built around confidence, creative energy and editorial restraint.">
+                    <div class="service-project-number">01A</div>
+                    <div>
+                      <strong>Vantera Brand Identity</strong>
+                      <span>Logo • Colour • Typography • Applications</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Brand Guidelines — Visual System"
+                           data-type="Brand Identity"
+                           data-description="A structured visual language defining logo use, colour, typography, layout and brand applications for consistent communication.">
+                    <div class="service-project-number">01B</div>
+                    <div>
+                      <strong>Visual Identity System</strong>
+                      <span>Guidelines • Assets • Brand consistency</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Packaging & Brand Applications"
+                           data-type="Brand Identity"
+                           data-description="Selected brand touchpoints showing how the identity translates into packaging, stationery, merchandise and real-world applications.">
+                    <div class="service-project-number">01C</div>
+                    <div>
+                      <strong>Brand Applications</strong>
+                      <span>Packaging • Stationery • Mockups</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                </div>
+              </div>
             </div>
 
-            <span class="service-icon">↗</span>
-
+            <span class="service-icon" aria-hidden="true">+</span>
           </div>
 
 
           <!-- SERVICE 02 -->
-          <div class="service-item reveal">
+          <div class="service-item service-accordion-item reveal" tabindex="0" role="button"
+               aria-expanded="false" aria-controls="service-panel-02">
+            <div class="service-no">02</div>
 
-            <div class="service-no">
-              02
-            </div>
-
-            <div>
-
+            <div class="service-heading">
               <h3>Graphic Design</h3>
+              <p>Campaigns, social content, posters, brochures, presentations,
+                reports and marketing collateral.</p>
 
-              <p>
-                Campaigns, social content, posters, brochures, presentations,
-                reports and marketing collateral.
-              </p>
+              <div class="service-details" id="service-panel-02" hidden>
+                <div class="service-project-grid">
 
+                  <article class="service-project"
+                           data-title="Not Just a Design — Vantera Campaign"
+                           data-type="Campaign Design"
+                           data-description="A visual campaign built around the idea that effective design is more than decoration: it is a strategic visual statement.">
+                    <div class="service-project-number">02A</div>
+                    <div>
+                      <strong>Not Just a Design</strong>
+                      <span>Campaign • Social • Key Visual</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Real Estate Visual Marketing"
+                           data-type="Graphic Design"
+                           data-description="Premium property marketing visuals combining strong typography, hierarchy, image treatment and social-first layouts.">
+                    <div class="service-project-number">02B</div>
+                    <div>
+                      <strong>Real Estate Visuals</strong>
+                      <span>Advertising • Social • Marketing collateral</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Editorial & Publication Design"
+                           data-type="Editorial Design"
+                           data-description="Multi-page editorial layouts designed for clarity, hierarchy, visual rhythm and professional presentation across print and digital formats.">
+                    <div class="service-project-number">02C</div>
+                    <div>
+                      <strong>Editorial Design</strong>
+                      <span>Magazines • Reports • Presentations</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                </div>
+              </div>
             </div>
 
-            <span class="service-icon">↗</span>
-
+            <span class="service-icon" aria-hidden="true">+</span>
           </div>
 
 
           <!-- SERVICE 03 -->
-          <div class="service-item reveal">
+          <div class="service-item service-accordion-item reveal" tabindex="0" role="button"
+               aria-expanded="false" aria-controls="service-panel-03">
+            <div class="service-no">03</div>
 
-            <div class="service-no">
-              03
-            </div>
-
-            <div>
-
+            <div class="service-heading">
               <h3>Photography</h3>
+              <p>Brand photography, portraits, products, property, events and
+                visual stories designed to give your brand a stronger presence.</p>
 
-              <p>
-                Brand photography, portraits, products, property, events and
-                visual stories designed to give your brand a stronger presence.
-              </p>
+              <div class="service-details" id="service-panel-03" hidden>
+                <div class="service-project-grid">
 
+                  <article class="service-project"
+                           data-title="Brand & Portrait Photography"
+                           data-type="Photography"
+                           data-description="Portrait-led photography designed to humanise brands and communicate personality, confidence and credibility.">
+                    <div class="service-project-number">03A</div>
+                    <div>
+                      <strong>Brand Portraits</strong>
+                      <span>Portraits • Editorial • Corporate</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Product & Commercial Photography"
+                           data-type="Photography"
+                           data-description="Clean, high-impact product imagery designed for advertising, ecommerce, campaigns and branded communications.">
+                    <div class="service-project-number">03B</div>
+                    <div>
+                      <strong>Commercial Photography</strong>
+                      <span>Products • Campaigns • Advertising</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Visual Stories"
+                           data-type="Photography"
+                           data-description="Documentary and editorial photography that captures people, places and human moments with context and authenticity.">
+                    <div class="service-project-number">03C</div>
+                    <div>
+                      <strong>Visual Stories</strong>
+                      <span>Documentary • Events • Editorial</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                </div>
+              </div>
             </div>
 
-            <span class="service-icon">↗</span>
-
+            <span class="service-icon" aria-hidden="true">+</span>
           </div>
 
 
           <!-- SERVICE 04 -->
-          <div class="service-item reveal">
+          <div class="service-item service-accordion-item reveal" tabindex="0" role="button"
+               aria-expanded="false" aria-controls="service-panel-04">
+            <div class="service-no">04</div>
 
-            <div class="service-no">
-              04
-            </div>
-
-            <div>
-
+            <div class="service-heading">
               <h3>Video Production</h3>
+              <p>Interviews, promotional videos, social-first video, event
+                coverage, reels and editorial multimedia production.</p>
 
-              <p>
-                Interviews, promotional videos, social-first video, event
-                coverage, reels and editorial multimedia production.
-              </p>
+              <div class="service-details" id="service-panel-04" hidden>
+                <div class="service-project-grid">
 
+                  <article class="service-project"
+                           data-title="Editorial Stories — Multimedia"
+                           data-type="Video & Editorial"
+                           data-description="Editorial storytelling through interviews, photography, video and social-first visual packaging.">
+                    <div class="service-project-number">04A</div>
+                    <div>
+                      <strong>Editorial Stories</strong>
+                      <span>Interviews • Reporting • Social video</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Brand & Promotional Video"
+                           data-type="Video Production"
+                           data-description="Short-form and campaign-oriented video designed to explain, promote and strengthen brand communication.">
+                    <div class="service-project-number">04B</div>
+                    <div>
+                      <strong>Promotional Video</strong>
+                      <span>Brand films • Reels • Campaigns</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Event & Social Coverage"
+                           data-type="Video Production"
+                           data-description="Fast-turnaround event and social video packages built for digital audiences and real-time publishing.">
+                    <div class="service-project-number">04C</div>
+                    <div>
+                      <strong>Event & Social Video</strong>
+                      <span>Events • Reels • Digital coverage</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                </div>
+              </div>
             </div>
 
-            <span class="service-icon">↗</span>
-
+            <span class="service-icon" aria-hidden="true">+</span>
           </div>
 
 
           <!-- SERVICE 05 -->
-          <div class="service-item reveal">
+          <div class="service-item service-accordion-item reveal" tabindex="0" role="button"
+               aria-expanded="false" aria-controls="service-panel-05">
+            <div class="service-no">05</div>
 
-            <div class="service-no">
-              05
-            </div>
-
-            <div>
-
+            <div class="service-heading">
               <h3>Motion Graphics</h3>
+              <p>Animated typography, visual explainers, branded motion systems
+                and dynamic content for digital platforms.</p>
 
-              <p>
-                Animated typography, visual explainers, branded motion systems
-                and dynamic content for digital platforms.
-              </p>
+              <div class="service-details" id="service-panel-05" hidden>
+                <div class="service-project-grid">
 
+                  <article class="service-project"
+                           data-title="Motion Stories — Visual Direction"
+                           data-type="Motion Graphics"
+                           data-description="Motion-led visual communication combining typography, composition and movement for digital platforms.">
+                    <div class="service-project-number">05A</div>
+                    <div>
+                      <strong>Motion Stories</strong>
+                      <span>Typography • Brand motion • Social</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Animated Brand Systems"
+                           data-type="Motion Graphics"
+                           data-description="Flexible motion systems that bring logos, graphic elements and brand language to life across digital touchpoints.">
+                    <div class="service-project-number">05B</div>
+                    <div>
+                      <strong>Animated Brand Systems</strong>
+                      <span>Logo motion • Transitions • Digital assets</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Explainers & Social Motion"
+                           data-type="Motion Graphics"
+                           data-description="Short animated explainers and social-first motion pieces built to clarify ideas and increase attention.">
+                    <div class="service-project-number">05C</div>
+                    <div>
+                      <strong>Social Motion</strong>
+                      <span>Explainers • Reels • Animated graphics</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                </div>
+              </div>
             </div>
 
-            <span class="service-icon">↗</span>
-
+            <span class="service-icon" aria-hidden="true">+</span>
           </div>
 
 
           <!-- SERVICE 06 -->
-          <div class="service-item reveal">
+          <div class="service-item service-accordion-item reveal" tabindex="0" role="button"
+               aria-expanded="false" aria-controls="service-panel-06">
+            <div class="service-no">06</div>
 
-            <div class="service-no">
-              06
-            </div>
-
-            <div>
-
+            <div class="service-heading">
               <h3>Content & Campaigns</h3>
+              <p>Integrated visual campaigns and content systems that connect
+                strategy, design, photography, video and social media.</p>
 
-              <p>
-                Integrated visual campaigns and content systems that connect
-                strategy, design, photography, video and social media.
-              </p>
+              <div class="service-details" id="service-panel-06" hidden>
+                <div class="service-project-grid">
 
+                  <article class="service-project"
+                           data-title="Integrated Social Campaign"
+                           data-type="Campaign Design"
+                           data-description="A coordinated campaign system connecting creative strategy, key visuals, social assets, motion and content rollout.">
+                    <div class="service-project-number">06A</div>
+                    <div>
+                      <strong>Integrated Campaigns</strong>
+                      <span>Strategy • Design • Social • Motion</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Content Systems"
+                           data-type="Content & Campaigns"
+                           data-description="Repeatable content systems designed to maintain visual consistency while adapting to multiple platforms and formats.">
+                    <div class="service-project-number">06B</div>
+                    <div>
+                      <strong>Content Systems</strong>
+                      <span>Templates • Social • Brand consistency</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                  <article class="service-project"
+                           data-title="Creative Direction"
+                           data-type="Creative Direction"
+                           data-description="Concept development and visual direction that align messaging, design and production around one clear creative idea.">
+                    <div class="service-project-number">06C</div>
+                    <div>
+                      <strong>Creative Direction</strong>
+                      <span>Concept • Art direction • Production</span>
+                    </div>
+                    <b>↗</b>
+                  </article>
+
+                </div>
+              </div>
             </div>
 
-            <span class="service-icon">↗</span>
-
+            <span class="service-icon" aria-hidden="true">+</span>
           </div>
 
         </div>
-
 
         <div class="service-callout reveal">
 
@@ -1487,6 +1794,69 @@
 
 
   <!-- JavaScript -->
+
+  <script>
+    (function () {
+      const items = document.querySelectorAll(".service-accordion-item");
+
+      function closeItem(item) {
+        item.classList.remove("is-open");
+        item.setAttribute("aria-expanded", "false");
+        const panel = document.getElementById(item.getAttribute("aria-controls"));
+        if (panel) panel.hidden = true;
+      }
+
+      function toggleItem(item) {
+        const isOpen = item.classList.contains("is-open");
+
+        items.forEach(other => {
+          if (other !== item) closeItem(other);
+        });
+
+        if (isOpen) {
+          closeItem(item);
+          return;
+        }
+
+        item.classList.add("is-open");
+        item.setAttribute("aria-expanded", "true");
+        const panel = document.getElementById(item.getAttribute("aria-controls"));
+        if (panel) panel.hidden = false;
+      }
+
+      items.forEach(item => {
+        item.addEventListener("click", function (event) {
+          if (event.target.closest(".service-project")) {
+            const project = event.target.closest(".service-project");
+            const modal = document.getElementById("projectModal");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalType = document.getElementById("modalType");
+            const modalDescription = document.getElementById("modalDescription");
+
+            if (modal && modalTitle && modalType && modalDescription) {
+              modalTitle.textContent = project.dataset.title || "Project";
+              modalType.textContent = project.dataset.type || "Project";
+              modalDescription.textContent = project.dataset.description || "";
+              modal.classList.add("open");
+              modal.setAttribute("aria-hidden", "false");
+              document.body.classList.add("modal-open");
+            }
+            return;
+          }
+
+          toggleItem(item);
+        });
+
+        item.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleItem(item);
+          }
+        });
+      });
+    })();
+  </script>
+
   <script src="script.js"></script>
 
 </body>
