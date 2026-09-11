@@ -221,6 +221,43 @@
 
   </style>
 
+
+<style id="vantera-editor-styles">
+  /* =========================
+     VANTERA VISUAL EDITOR
+  ========================== */
+  .vc-editor-toggle{position:fixed;right:18px;bottom:18px;z-index:99999;border:1px solid rgba(255,255,255,.18);background:#192B65;color:#fff;padding:.8rem 1rem;border-radius:999px;font:700 .78rem/1 "Satoshi",Arial,sans-serif;letter-spacing:.05em;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+  .vc-editor-toggle.is-active{background:#FC692E;color:#0E1521}
+  .vc-editor-panel{position:fixed;top:18px;right:18px;z-index:99998;width:min(360px,calc(100vw - 36px));max-height:calc(100vh - 36px);overflow:auto;background:#0E1521;color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.35);padding:16px;display:none}
+  .vc-editor-panel.open{display:block}
+  .vc-editor-panel h3{margin:0 0 8px;font-family:"MuseoModerno",sans-serif;font-size:1rem}
+  .vc-editor-panel p{margin:0 0 14px;font-size:.78rem;line-height:1.5;opacity:.72}
+  .vc-editor-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .vc-editor-field{display:grid;gap:6px}
+  .vc-editor-field label{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+  .vc-editor-field input[type=color]{width:100%;height:42px;border:0;border-radius:10px;background:#fff;padding:4px}
+  .vc-editor-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+  .vc-editor-btn{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;padding:.75rem .85rem;border-radius:10px;cursor:pointer;font-weight:700;font-size:.74rem}
+  .vc-editor-btn.primary{background:#FC692E;color:#0E1521;border-color:#FC692E}
+  .vc-editor-btn.full{grid-column:1/-1}
+  .vc-editor-status{font-size:.72rem;margin-top:10px;min-height:1em;opacity:.72}
+  body.vc-editing [data-vc-editable="true"]{outline:1px dashed rgba(252,105,46,.9);outline-offset:3px;cursor:text}
+  body.vc-editing [data-vc-editable="true"]:focus{outline:2px solid #FC692E;background:rgba(252,105,46,.06)}
+  body.vc-editing img[data-vc-image="true"]{outline:1px dashed rgba(252,105,46,.9);outline-offset:4px;cursor:pointer}
+  .vc-image-pop{position:fixed;inset:0;background:rgba(8,12,18,.72);backdrop-filter:blur(6px);display:grid;place-items:center;z-index:100000;padding:20px}
+  .vc-image-pop-card{width:min(420px,100%);background:#fff;color:#111;border-radius:18px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+  .vc-image-pop-card h4{margin:0 0 8px;font-family:"MuseoModerno",sans-serif}
+  .vc-image-pop-card p{font-size:.8rem;line-height:1.5;opacity:.7;margin:0 0 12px}
+  .vc-image-pop-card input{width:100%}
+
+  /* About section dual CTA */
+  .about-cta-row{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-top:1.5rem}
+  .about-john-btn{display:inline-flex;align-items:center;gap:.55rem;border:1px solid currentColor;padding:.75rem 1rem;border-radius:999px;text-decoration:none;color:inherit;font-weight:700;letter-spacing:.01em;transition:all .25s ease}
+  .about-john-btn:hover{background:#192B65;color:#fff;border-color:#192B65;transform:translateY(-1px)}
+  .about-john-btn span{font-size:1rem;line-height:1}
+  @media (max-width:700px){.vc-editor-toggle{right:12px;bottom:12px}.vc-editor-panel{top:12px;right:12px}.about-cta-row{align-items:flex-start;gap:.9rem}}
+</style>
+
 </head>
 
 <body>
@@ -1349,12 +1386,26 @@
           </div>
 
 
-          <a
-            href="#contact"
-            class="text-link dark-link"
-          >
-            Work with Vantera <span>↗</span>
-          </a>
+          <div class="about-cta-row">
+            <a
+              href="#contact"
+              class="text-link dark-link"
+              data-vc-editable="true"
+            >
+              Work with Vantera <span>↗</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/john-ayodi-0304253a9/"
+              class="about-john-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Read more about John Ayodi on LinkedIn"
+              data-vc-editable="true"
+            >
+              About John <span>↗</span>
+            </a>
+          </div>
 
         </div>
 
@@ -2020,6 +2071,180 @@
   </script>
 
   <script src="script.js"></script>
+
+
+<!-- =========================
+     VANTERA VISUAL EDITOR
+========================== -->
+<button class="vc-editor-toggle" id="vcEditorToggle" type="button" aria-expanded="false">EDIT SITE</button>
+
+<aside class="vc-editor-panel" id="vcEditorPanel" aria-label="Vantera visual editor">
+  <h3>Vantera Visual Editor</h3>
+  <p>Edit text directly on the preview, replace images, adjust the core brand colours, then save the draft or export the edited HTML.</p>
+
+  <div class="vc-editor-grid">
+    <div class="vc-editor-field">
+      <label for="vcNavy">Navy</label>
+      <input id="vcNavy" type="color" value="#192B65" />
+    </div>
+    <div class="vc-editor-field">
+      <label for="vcOrange">Orange</label>
+      <input id="vcOrange" type="color" value="#FC692E" />
+    </div>
+  </div>
+
+  <div class="vc-editor-actions">
+    <button class="vc-editor-btn primary" id="vcSave" type="button">Save Draft</button>
+    <button class="vc-editor-btn" id="vcReset" type="button">Reset Draft</button>
+    <button class="vc-editor-btn full" id="vcExport" type="button">Export Editable HTML</button>
+  </div>
+  <div class="vc-editor-status" id="vcStatus"></div>
+</aside>
+
+<input id="vcImageInput" type="file" accept="image/*" hidden />
+
+<script id="vantera-visual-editor">
+(function(){
+  const body=document.body;
+  const root=document.documentElement;
+  const toggle=document.getElementById('vcEditorToggle');
+  const panel=document.getElementById('vcEditorPanel');
+  const saveBtn=document.getElementById('vcSave');
+  const resetBtn=document.getElementById('vcReset');
+  const exportBtn=document.getElementById('vcExport');
+  const navy=document.getElementById('vcNavy');
+  const orange=document.getElementById('vcOrange');
+  const status=document.getElementById('vcStatus');
+  const imageInput=document.getElementById('vcImageInput');
+  const STORAGE_KEY='vanteraVisualEditorStateV2';
+
+  const editableSelectors=[
+    'main h1','main h2','main h3','main p','main blockquote','main strong',
+    'main .eyebrow','main .section-kicker','main .project-meta span','main .project-meta h3',
+    'main .service-project strong','main .service-project span',
+    'main .process-card h3','main .process-card p',
+    'main .insight-type','main .insight-card h3','main .insight-card p',
+    'main .contact-details strong','footer p','footer .footer-bottom span'
+  ];
+
+  function markEditableNodes(){
+    editableSelectors.forEach(sel=>document.querySelectorAll(sel).forEach(el=>{
+      if(el.closest('#projectModal')) return;
+      el.dataset.vcEditable='true';
+      if(!el.dataset.vcKey){
+        el.dataset.vcKey='text-'+Math.random().toString(36).slice(2,10)+'-'+document.querySelectorAll('[data-vc-key]').length;
+      }
+      el.contentEditable='false';
+      el.spellcheck=true;
+    }));
+    document.querySelectorAll('main img,.project-modal-gallery img').forEach(img=>{
+      img.dataset.vcImage='true';
+      if(!img.dataset.vcKey) img.dataset.vcKey='img-'+Math.random().toString(36).slice(2,10);
+    });
+  }
+
+  function applyColors(){
+    let style=document.getElementById('vc-live-colors');
+    if(!style){style=document.createElement('style');style.id='vc-live-colors';document.head.appendChild(style);}
+    style.textContent=`
+      :root{--vc-navy:${navy.value};--vc-orange:${orange.value};}
+      .section-dark,.services,.contact,.footer{background:${navy.value} !important;}
+      .section-orange{background:${orange.value} !important;}
+      .btn-primary,.nav-cta{background:${orange.value} !important;border-color:${orange.value} !important;}
+      .filter.active,.service-project-number,.service-project b,.quote-mark{color:${orange.value} !important;}
+      .dot{background:${orange.value} !important;}
+      .art-orange{background:${orange.value} !important;}
+      .service-accordion-item:focus-visible{outline-color:${orange.value} !important;}
+    `;
+  }
+
+  function setEditing(on){
+    body.classList.toggle('vc-editing',on);
+    toggle.classList.toggle('is-active',on);
+    toggle.textContent=on?'DONE EDITING':'EDIT SITE';
+    toggle.setAttribute('aria-expanded',String(on));
+    panel.classList.toggle('open',on);
+    document.querySelectorAll('[data-vc-editable="true"]').forEach(el=>el.contentEditable=on?'true':'false');
+    status.textContent=on?'Click outlined text to edit. Click an image to replace it.':'Edit mode off.';
+  }
+
+  function collectState(){
+    const text={},images={};
+    document.querySelectorAll('[data-vc-editable="true"]').forEach(el=>text[el.dataset.vcKey]=el.innerHTML);
+    document.querySelectorAll('img[data-vc-image="true"]').forEach(img=>images[img.dataset.vcKey]=img.src);
+    return {text,images,navy:navy.value,orange:orange.value};
+  }
+
+  function saveDraft(){
+    try{
+      localStorage.setItem(STORAGE_KEY,JSON.stringify(collectState()));
+      status.textContent='Draft saved in this browser.';
+    }catch(e){status.textContent='Local save failed. Use Export Editable HTML.';}
+  }
+
+  function restoreDraft(){
+    try{
+      const raw=localStorage.getItem(STORAGE_KEY); if(!raw) return;
+      const state=JSON.parse(raw);
+      if(state.navy) navy.value=state.navy;
+      if(state.orange) orange.value=state.orange;
+      if(state.text) Object.entries(state.text).forEach(([key,html])=>{
+        const el=document.querySelector('[data-vc-key="'+CSS.escape(key)+'"]'); if(el) el.innerHTML=html;
+      });
+      if(state.images) Object.entries(state.images).forEach(([key,src])=>{
+        const img=document.querySelector('img[data-vc-key="'+CSS.escape(key)+'"]'); if(img) img.src=src;
+      });
+      applyColors();
+    }catch(e){}
+  }
+
+  toggle.addEventListener('click',()=>setEditing(!body.classList.contains('vc-editing')));
+  navy.addEventListener('input',applyColors);
+  orange.addEventListener('input',applyColors);
+  saveBtn.addEventListener('click',saveDraft);
+  resetBtn.addEventListener('click',()=>{localStorage.removeItem(STORAGE_KEY);status.textContent='Saved draft removed. Reloading original version...';setTimeout(()=>location.reload(),250);});
+
+  document.addEventListener('click',e=>{
+    if(!body.classList.contains('vc-editing')) return;
+    const img=e.target.closest('img[data-vc-image="true"]');
+    if(!img) return;
+    e.preventDefault();
+    imageInput.dataset.targetKey=img.dataset.vcKey;
+    imageInput.click();
+  });
+
+  imageInput.addEventListener('change',()=>{
+    const file=imageInput.files && imageInput.files[0]; if(!file) return;
+    const key=imageInput.dataset.targetKey;
+    const img=document.querySelector('img[data-vc-key="'+CSS.escape(key)+'"]'); if(!img) return;
+    const reader=new FileReader();
+    reader.onload=()=>{img.src=reader.result;status.textContent='Image replaced. Save or export to keep it.';};
+    reader.readAsDataURL(file);
+    imageInput.value='';
+  });
+
+  exportBtn.addEventListener('click',()=>{
+    try{
+      saveDraft();
+      const clone=document.documentElement.cloneNode(true);
+      const live=clone.querySelector('#vc-live-colors'); if(live) live.remove();
+      const statusClone=clone.querySelector('#vcStatus'); if(statusClone) statusClone.textContent='';
+      const html='<!DOCTYPE html>\n'+clone.outerHTML;
+      const blob=new Blob([html],{type:'text/html'});
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a'); a.href=url; a.download='vantera-creatives-editable.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),1000);
+      status.textContent='Editable HTML exported.';
+    }catch(e){status.textContent='Export failed. Save the draft and try again.';}
+  });
+
+  markEditableNodes();
+  restoreDraft();
+  applyColors();
+  setEditing(false);
+})();
+</script>
 
 </body>
 </html>
